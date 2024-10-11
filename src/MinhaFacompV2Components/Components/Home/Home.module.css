@@ -1,0 +1,182 @@
+.container{
+  width: 90vw;
+  max-width: 75rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoMinhaFacomp{
+  width: 100%;
+  max-width: 15rem;
+  margin-bottom: 1.5rem;
+
+  pointer-events: none;
+  --delay: .3s;
+}
+
+.logoMinhaFacomp img{
+  width: 100%;
+}
+
+.messageBox{  
+  width: 100%;
+  max-width: 40rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+
+  user-select: none;
+}
+
+.messageBox span{
+  color: var(--color-text);
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  --delay: .5s;
+}
+
+.messageBox h1,
+.messageBox h1 span{
+  color: var(--color-text);
+  font-size: 2rem;
+  line-height: 2.6rem;
+  margin-top: 1rem;
+}
+
+.messageBox h1 span{
+  color: #40A3EA;
+  margin-right: 1rem;
+}
+
+.messageBox h1{
+  margin-bottom: 2rem;
+
+  --delay: .7s;
+}
+
+.messageBox p{
+  color: var(--color-text);
+
+  --delay: .9s;
+}
+
+.formMatricula{
+  width: 100%;
+  max-width: 40rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  --delay: 1s;
+}
+
+.inputMatricula{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.inputMatricula label{
+  color: var(--color-text);
+  text-align: center;
+  padding: 1rem;
+}
+
+.inputMatricula input{
+  width: 100%;
+  border: 0;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  font-size: 2rem;
+
+  box-shadow: 0 4px .5em #0000004d;
+}
+
+.inputMatricula input:focus{
+  outline: 2px solid rgb(40, 119, 236);
+}
+
+.formMatricula button{
+  width: 0;
+  height: 5.5rem;
+  background-color: var(--color-bttn);
+  border: 0;
+  border-radius: 1rem;
+  padding: 0;
+  color: #FFF;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: .5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: all .2s ease-in-out;
+}
+
+.formMatricula button:hover{
+  background-color: var(--color-bttn-hover);
+}
+
+.formMatricula button img{
+  width: 2.5rem;
+}
+
+.formMatricula button.showSendButton{
+  width: 100%;
+  padding: .5rem;
+}
+
+.formMatricula button.success{
+  background-color: var(--color-success-bttn);
+}
+
+
+
+
+.logoMinhaFacomp,
+.messageBox span,
+.messageBox h1,
+.messageBox p,
+.formMatricula{
+  transform: scale(.95);
+  opacity: 0;
+
+  animation: showElementAnimation .6s ease-in-out var(--delay) forwards;
+}
+
+@media screen and (min-width: 768px){
+  .messageBox{
+    max-width: 70rem;
+  }
+
+  .messageBox span{
+    font-size: 2.6rem;
+    font-weight: bold;
+  }
+  
+  .messageBox h1,
+  .messageBox h1 span{
+    font-size: 3.4rem;
+    line-height: 4.1rem;
+    margin-top: 1rem;
+  }
+}
+
+@keyframes showElementAnimation{
+  to{
+    transform: scale(1);
+    opacity: 1;
+  }
+}

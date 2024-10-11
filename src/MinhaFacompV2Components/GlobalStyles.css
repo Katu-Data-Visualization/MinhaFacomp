@@ -1,0 +1,184 @@
+*, 
+*::before, 
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* img,svg{
+  width: 100%;
+  max-width: 100%;
+} */
+
+:root{
+  font-size: 62.5%;
+
+  --color-primary: #125fd3;
+
+  --color-bttn: #2f78e4;
+  --color-bttn-hover: #1c5ab8;
+
+  --color-bg: #FFFB;
+  
+  --color-text: #FFF; /*#e7e7e7*/
+  --color-error: #F80000;
+  --color-success: #0ea830;
+  --color-success-bttn: #31e85c;
+  --linear-gradient: linear-gradient(to right, #00000063, #00000063);
+  --wallpaper-url: url(./Assets/imgs/wallpapers/wallpaper-minhafacomp-1.webp);
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  background-color: transparent;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  overflow: hidden;
+
+  background-image: var(--linear-gradient), var(--wallpaper-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.imageCredit{
+  width: 90%;
+  max-width: 3.1rem;
+  background-color: transparent;
+  color: #FFF;
+  border-radius: 2rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+  transition-delay: 0s;
+
+  opacity: 0;
+  animation: showLogosAnimation .6s ease-in-out 1.5s forwards;
+}
+
+.imageCredit:hover{
+  max-width: 20rem;
+  background-color: #40A3EA;
+  transition-delay: .5s;
+}
+
+.imageCredit svg{
+  min-width: 3rem;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+.imageCredit a{
+  color: #FFF;
+  text-decoration: none;
+  text-wrap: nowrap;
+  transition: all .3s ease-in-out;
+}
+
+.imageCredit:has(a:focus){
+  max-width: 20rem;
+  background-color: #40A3EA;
+}
+
+.backgroundMinhaFacomp{
+  width: 100vw;
+  height: 100vh;
+  opacity: .2;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  
+  user-select: none;
+
+  filter: blur(.7rem);
+
+  display: none;
+}
+
+.backgroundMinhaFacomp figure{
+  width: 100%;
+  max-width: 60rem;
+}
+
+.backgroundMinhaFacomp figure img{
+  width: 100%;
+}
+
+.logos{
+  width: 11rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+
+  user-select: none;
+}
+
+.logoUFPA{
+  width: 6rem;
+  --delay: 1.4s;
+}
+
+.logoFACOMP{
+  width: 14rem;
+  --delay: 1.6s;
+}
+
+.logoUFPA,
+.logoFACOMP{
+  transform: translateY(100%);
+  opacity: 0;
+  
+  animation: showLogosAnimation .6s ease-in-out var(--delay) forwards;
+}
+
+.logoUFPA img,
+.logoFACOMP img{
+  width: 100%;
+}
+
+.messageBox{
+  background-color: #FFF;
+  border-radius: 1rem;
+  padding: .5rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px){
+  .logos{
+    width: 17rem;
+  }
+}
+
+@keyframes showLogosAnimation{
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

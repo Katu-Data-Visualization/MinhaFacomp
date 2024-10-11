@@ -1,0 +1,90 @@
+.container{
+  width: 100%;
+  height: 100%;
+
+  background-image: var(--linear-gradient), var(--wallpaper-url);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 2;
+  clip-path: circle(0% at center center);
+  transition: clip-path .8s ease-in-out;
+}
+
+.showSuccessScreen{
+  clip-path: circle(150% at center center);
+}
+
+.successMessage{
+  width: 90%;
+  max-width: 50rem;
+  background-color: var(--color-bg);
+  color: var(--color-success);
+  border-radius: 2rem;
+  padding: 8.3rem 2rem 4rem;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+
+  position: relative;
+  user-select: none;
+}
+
+.successMessage figure{
+  width: 100%;
+  max-width: 10rem;
+
+  display: flex;
+
+  position: absolute;
+  top: -3.5rem;
+}
+
+.successMessage figure img{
+  width: 100%;
+}
+
+.successMessage p{
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+
+  font-weight: bold;
+}
+
+.successMessage button[type='button']{
+  width: 100%;
+  max-width: 25rem;
+  border: 0;
+  background-color: var(--color-primary);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  transition: all .2s ease-in-out;
+
+  cursor: pointer;
+}
+
+.successMessage button[type='button']:hover{
+  background-color: var(--color-bttn-hover);
+}

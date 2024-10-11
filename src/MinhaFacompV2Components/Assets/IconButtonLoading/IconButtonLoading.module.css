@@ -1,0 +1,11 @@
+.icon{
+  width: 100%;
+  transform: translateY(-1rem);
+  animation: iconAnimation .4s cubic-bezier(.6,.1,1,.4) var(--delay) alternate infinite;
+}
+
+@keyframes iconAnimation {
+  to{
+    transform: translateY(1rem);
+  }
+}
