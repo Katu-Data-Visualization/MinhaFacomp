@@ -8,10 +8,10 @@ export default defineConfig(() => {
   return {
     plugins: [react()],
     server: {
-      port: isMainBranch ? 0 : 4001,
+      port: isMainBranch ? 4001 : 0,
       host: '0.0.0.0',
     },
-    base: isMainBranch ? "/" : "/p/minhafacomp/",
+    base: isMainBranch ? "/d/minhafacomp/" : "/",
     define: {
       'import.meta.env.VITE_BRANCH': JSON.stringify(branch)
     }
