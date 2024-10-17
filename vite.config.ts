@@ -11,7 +11,7 @@ export default defineConfig(() => {
       port: isMainBranch ? 0 : 4001,
       host: '0.0.0.0',
     },
-    base: isMainBranch ? "/" : "/p/minhafacomp/",
+    base: isMainBranch ? "/" : "/d/minhafacomp/",
     define: {
       'import.meta.env.VITE_BRANCH': JSON.stringify(branch)
     }
