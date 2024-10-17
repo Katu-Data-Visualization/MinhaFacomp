@@ -1,0 +1,19 @@
+stages:
+  - build
+
+build_and_run_dev:
+  stage: build
+  image: docker:latest
+  services:
+    - docker:dind
+  variables:
+    DOCKER_DRIVER: overlay2
+    BRANCH: "dev"
+    PORT: 4001
+  script:
+    - docker stop minhafacomp-dev || true
+    - docker rm minhafacomp-dev || true
+    - docker build -t minhafacomp-dev .
+    - docker run -d --name minhafacomp-dev -p $PORT:$PORT minhafacomp-dev
+  only:
+    - dev
