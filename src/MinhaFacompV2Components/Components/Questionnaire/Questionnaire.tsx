@@ -83,19 +83,12 @@ export default function Questionnaire({
       pergunta:
         "Se a resposta anterior foi 'sim', você se sentiu satisfeito com as explicações do site ou encontrou divergências nas comunicações?",
       caixa_de_texto: false,
-      tipo_pergunta: 3,
+      tipo_pergunta: 5,
     },
     {
       categoria: "Comunicação",
       pergunta:
         "Sobre as oportunidades de estágio, você acredita que a comunicação da FACOMP é eficiente para vagas internas?",
-      caixa_de_texto: false,
-      tipo_pergunta: 3,
-    },
-    {
-      categoria: "Comunicação",
-      pergunta:
-        "Sobre as oportunidades de estágio, você acredita que a comunicação da FACOMP é eficiente para vagas externas?",
       caixa_de_texto: false,
       tipo_pergunta: 3,
     },
@@ -306,14 +299,12 @@ export default function Questionnaire({
       categoria: "Perguntas Finais",
       pergunta:
         "Você gostaria de fazer alguma sugestão adicional ou expressar alguma reclamação sobre a Faculdade de Computação?",
-      caixa_de_texto: true,
       tipo_pergunta: 4,
     },
     {
       categoria: "Perguntas Finais",
       pergunta:
         "Existe algum ponto que não foi abordado nas perguntas anteriores que você gostaria de comentar sobre sua experiência na Faculdade de Computação?",
-      caixa_de_texto: true,
       tipo_pergunta: 4,
     },
   ];
@@ -344,7 +335,6 @@ export default function Questionnaire({
             showQuestion={index === currentQuestion ? true : false}
             category={question.categoria}
             question={question.pergunta}
-            hasTextBox={question.caixa_de_texto}
             questionNumber={index + 1}
             questionType={question.tipo_pergunta}
             handlResposta={handlResposta}
