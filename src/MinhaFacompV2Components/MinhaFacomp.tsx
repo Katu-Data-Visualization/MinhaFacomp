@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import "./GlobalStyles.css";
+import "./MinhaFacomp.css";
+import "../GlobalStyles.css";
 
 import { Info } from "@phosphor-icons/react";
 
@@ -56,7 +57,7 @@ export default function MinhaFacomp() {
   }
 
   return (
-    <>
+    <main className="container">
       <div className="imageCredit">
         <Info />
         <a
@@ -100,6 +101,6 @@ export default function MinhaFacomp() {
           </a>
         </figure>
       </div>
-    </>
+    </main>
   );
 }

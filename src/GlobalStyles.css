@@ -1,0 +1,37 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* img,svg{
+  width: 100%;
+  max-width: 100%;
+} */
+
+:root {
+  font-size: 62.5%;
+
+  --color-primary: #125fd3;
+
+  --color-bttn: #2f78e4;
+  --color-bttn-hover: #1c5ab8;
+
+  --color-bg: #fffb;
+
+  --color-text: #fff; /*#e7e7e7*/
+  --color-error: #f80000;
+  --color-success: #0ea830;
+  --color-success-bttn: #31e85c;
+  --linear-gradient: linear-gradient(to right, #00000063, #00000063);
+  --wallpaper-url: url(./MinhaFacompV2Components/Assets/imgs/wallpapers/wallpaper-minhafacomp-1.webp);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+}

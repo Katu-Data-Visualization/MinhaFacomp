@@ -2,7 +2,7 @@ import "./LandingPage.css";
 
 const LandingPage = () => {
   return (
-    <div>
+    <div className="container-LandingPage">
       <h1>Landing Page</h1>
     </div>
   );
