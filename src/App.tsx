@@ -1,3 +1,18 @@
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MinhaFacomp from "./MinhaFacompV2Components/MinhaFacomp";
+import LandingPage from "./LandingPage/LandingPage";
 
-export default function App() {return (<MinhaFacomp/>)};
+const router = createBrowserRouter([
+  {
+    path: "/home",
+    element: <MinhaFacomp />,
+  },
+  {
+    path: "/",
+    element: <LandingPage />,
+  },
+]);
+
+export default function App() {
+  return <RouterProvider router={router} />;
+}
