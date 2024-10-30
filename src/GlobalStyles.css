@@ -28,10 +28,42 @@
   --color-success-bttn: #31e85c;
   --linear-gradient: linear-gradient(to right, #00000063, #00000063);
   --wallpaper-url: url(./MinhaFacompV2Components/Assets/imgs/wallpapers/wallpaper-minhafacomp-1.webp);
+
+  --text-theme-1: #ffffff;
+  --text-theme-2: #000000;
+  --text-theme-3: #0a8cbb;
+  --text-theme-4: #000000;
+  --text-theme-5: #000000;
+
+  --text-background-theme-1: #4bb8c526;
+  --text-background-theme-2: #0a8cbb;
+
+  --text-border-gray: #e4e2e2;
+  --text-border-gray-theme-2: #eeeeee;
+  --text-border-blue: #0a8cbb;
+
+  --text-shadow-theme-1: #00000026;
 }
 
 body {
   width: 100vw;
   height: 100vh;
   font-size: 1.6rem;
+}
+
+body.dark-theme {
+  --text-theme-1: #10d8e7;
+  --text-theme-2: #eeeeee;
+  --text-theme-3: #0a8cbb;
+  --text-theme-4: #e4e2e2;
+  --text-theme-5: #33cadb;
+
+  --text-background-theme-1: #3b3b3b;
+  --text-background-theme-2: #3b3b3b;
+
+  --text-border-gray: #e4e2e2;
+  --text-border-gray-theme-2: #eeeeee;
+  --text-border-blue: #10d8e7;
+
+  --text-shadow-theme-1: #00000026;
 }
