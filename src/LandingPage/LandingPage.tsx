@@ -30,6 +30,30 @@ const LandingPage = () => {
           </div>
         </div>
       </nav>
+
+      {/* MAIN CONTENT */}
+      <main className="container-page">
+        {/* HEADER */}
+        <header className="header-page">
+          <div className="header-items">
+            <h1 className="title-page">
+              Uma nova maneira de aprimorar a experiência acadêmica na{" "}
+              <span className="text-facomp">Faculdade de Computação</span>
+            </h1>
+            <p className="text-header-page">
+              Transforme a maneira como alunos e professores se conectam e
+              compartilham feedback. Com o{" "}
+              <span className="text-facomp">MinhaFACOMP</span>, você pode
+              contribuir para um ambiente de aprendizado mais dinâmico e
+              colaborativo. Junte-se a nós na construção de um futuro acadêmico
+              mais rico e inclusivo, onde sua voz é ouvida e valorizada.
+            </p>
+            <button className="button-participate">Participe Agora!</button>
+          </div>
+        </header>
+
+        {/* CONTENT */}
+      </main>
     </div>
   );
 };
