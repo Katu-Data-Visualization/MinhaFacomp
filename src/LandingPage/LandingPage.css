@@ -11,6 +11,94 @@
   background-image: none;
 }
 
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  border-bottom: 2px solid var(--text-border-gray);
+}
+
+.logo-container {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-FACOMP {
+  width: 10rem;
+}
+
+.logo-FACOMP img {
+  width: 100%;
+}
+
+.nav-items {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-links a {
+  border-bottom: 2px solid transparent;
+  text-decoration: none;
+  color: var(--text-theme-2);
+  transition: ease-in-out 0.2s;
+}
+
+.nav-links a:hover {
+  cursor: pointer;
+  border-bottom: 2px solid var(--text-border-blue);
+  transition: ease-in-out 0.2s;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.button-access {
+  padding: 1rem 2rem;
+  background-color: var(--text-background-theme-1);
+  border-radius: 5px;
+  border: 2px solid var(--text-border-blue);
+  font-weight: 500;
+  transition: ease-in-out 0.1s;
+  box-shadow: 0px 2px 2px 2px var(--text-shadow-theme-1);
+}
+
+.button-access:hover {
+  cursor: pointer;
+  opacity: 65%;
+  transition: ease-in-out 0.1s;
+}
+
+.button-toggle-theme {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-background-theme-1);
+  border-radius: 50%;
+  border: 2px solid var(--text-border-blue);
+  box-shadow: 0px 2px 2px 2px var(--text-shadow-theme-1);
+}
+
+.button-toggle-theme:hover {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
 }
 
