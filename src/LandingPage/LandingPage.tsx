@@ -1,11 +1,15 @@
 import "./LandingPage.css";
 
 import logoFACOMPsvg from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg.svg";
+import minhaFacompImage from "../MinhaFacompV2Components/Assets/imgs/minhaFacomp.png";
+import minhaFacompLogo from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg-simple.svg";
+
 import { Moon } from "@phosphor-icons/react";
 
 const LandingPage = () => {
   return (
     <div className="container-LandingPage">
+      <div></div>
       {/* NAVIGATION */}
       <nav className="nav-container">
         <div className="logo-container">
@@ -49,10 +53,39 @@ const LandingPage = () => {
               mais rico e inclusivo, onde sua voz é ouvida e valorizada.
             </p>
             <button className="button-participate">Participe Agora!</button>
+            <div className="image-minhaFacomp-header">
+              <figure>
+                <img src={minhaFacompImage} alt="Imagem do Minha Facomp" />
+              </figure>
+            </div>
           </div>
         </header>
 
         {/* CONTENT */}
+        <section className="about-page">
+          <div className="section-about-content">
+            <h2>Sobre o MinhaFACOMP</h2>
+            <p>
+              O MinhaFACOMP é um projeto desenvolvido com o objetivo central de
+              coletar feedbacks dos alunos da Faculdade de Computação sobre seus
+              respectivos cursos. Entendemos que a experiência acadêmica vai
+              muito além das salas de aula e dos materiais didáticos. Por isso,
+              queremos ouvir diretamente dos alunos suas opiniões, críticas e
+              sugestões.
+            </p>
+            <p>
+              Acreditamos que, para alcançar um ensino de qualidade, é
+              fundamental incorporar as visões e experiências dos próprios
+              estudantes. Ao oferecer uma plataforma dedicada a esse propósito,
+              o MinhaFACOMP possibilita que cada aluno tenha um papel ativo na
+              construção de um ambiente acadêmico mais dinâmico, participativo e
+              eficiente.
+            </p>
+          </div>
+          <div className="section-logo-content">
+            <img src={minhaFacompLogo} alt="Logo MinhaFacomp" />
+          </div>
+        </section>
       </main>
     </div>
   );

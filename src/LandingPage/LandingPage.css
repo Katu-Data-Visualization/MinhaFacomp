@@ -9,12 +9,19 @@
   overflow: auto;
 
   background-image: none;
+  padding: 0 4rem;
 }
 
 .nav-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: #ffffff;
   padding: 1rem 4rem;
   border-bottom: 2px solid var(--text-border-gray);
 }
@@ -101,14 +108,19 @@
 }
 
 .container-page {
-  height: 100%;
+  /* height: 100%; */
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1500px;
+  gap: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .header-page {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-top: 8rem;
+  margin-top: 14rem;
 }
 
 .header-items {
@@ -118,7 +130,7 @@
   justify-content: center;
 
   gap: 5rem;
-  max-width: 1100px;
+  max-width: 1200px;
 }
 
 .title-page {
@@ -157,6 +169,54 @@
   cursor: pointer;
   opacity: 65%;
   transition: ease-in-out 0.1s;
+}
+
+.image-minhaFacomp-header {
+  border: 2px solid var(--text-border-blue);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 120rem;
+}
+
+.image-minhaFacomp-header figure img {
+  width: 100%;
+  display: block;
+}
+
+.about-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6rem;
+  max-width: 1200px;
+}
+
+.section-about-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  gap: 2.5rem;
+}
+
+.section-about-content h2 {
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.section-about-content p {
+  font-weight: 400;
+  text-align: justify;
+}
+
+.section-logo-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-logo-content img {
+  width: 80%;
 }
 
 @media screen and (min-width: 768px) {
