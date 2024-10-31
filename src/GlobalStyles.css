@@ -34,6 +34,7 @@
   --text-theme-3: #0a8cbb;
   --text-theme-4: #000000;
   --text-theme-5: #000000;
+  --text-theme-6: #424242;
 
   --text-background-theme-1: #4bb8c526;
   --text-background-theme-2: #0a8cbb;
@@ -58,6 +59,7 @@ body.dark-theme {
   --text-theme-3: #0a8cbb;
   --text-theme-4: #e4e2e2;
   --text-theme-5: #33cadb;
+  --text-theme-6: #e4e2e2;
 
   --text-background-theme-1: #3b3b3b;
   --text-background-theme-2: #3b3b3b;

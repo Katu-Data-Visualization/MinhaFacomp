@@ -4,12 +4,15 @@ import logoFACOMPsvg from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-sv
 import minhaFacompImage from "../MinhaFacompV2Components/Assets/imgs/minhaFacomp.png";
 import minhaFacompLogo from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg-simple.svg";
 
-import { Moon } from "@phosphor-icons/react";
+import { ArrowsClockwise, ChatsCircle, Moon } from "@phosphor-icons/react";
+// import {
+//   ArrowsClockwiseIcon,
+//   FeedbackIcon,
+// } from "../MinhaFacompV2Components/Assets/imgs/exportSVG";
 
 const LandingPage = () => {
   return (
     <div className="container-LandingPage">
-      <div></div>
       {/* NAVIGATION */}
       <nav className="nav-container">
         <div className="logo-container">
@@ -21,10 +24,10 @@ const LandingPage = () => {
         </div>
         <div className="nav-items">
           <div className="nav-links">
-            <a href="">Início</a>
-            <a href="">Sobre</a>
-            <a href="">Funcionalidades</a>
-            <a href="">Parceiros</a>
+            <a href="#">Início</a>
+            <a href="#">Sobre</a>
+            <a href="#">Funcionalidades</a>
+            <a href="#">Parceiros</a>
           </div>
           <div className="nav-buttons">
             <button className="button-access">Acessar Plataforma</button>
@@ -63,27 +66,53 @@ const LandingPage = () => {
 
         {/* CONTENT */}
         <section className="about-page">
-          <div className="section-about-content">
-            <h2>Sobre o MinhaFACOMP</h2>
-            <p>
-              O MinhaFACOMP é um projeto desenvolvido com o objetivo central de
-              coletar feedbacks dos alunos da Faculdade de Computação sobre seus
-              respectivos cursos. Entendemos que a experiência acadêmica vai
-              muito além das salas de aula e dos materiais didáticos. Por isso,
-              queremos ouvir diretamente dos alunos suas opiniões, críticas e
-              sugestões.
-            </p>
-            <p>
-              Acreditamos que, para alcançar um ensino de qualidade, é
-              fundamental incorporar as visões e experiências dos próprios
-              estudantes. Ao oferecer uma plataforma dedicada a esse propósito,
-              o MinhaFACOMP possibilita que cada aluno tenha um papel ativo na
-              construção de um ambiente acadêmico mais dinâmico, participativo e
-              eficiente.
-            </p>
+          <h2>Sobre o MinhaFACOMP</h2>
+          <div className="section-about">
+            <div className="section-about-content">
+              <p>
+                O MinhaFACOMP é um projeto desenvolvido com o objetivo central
+                de coletar feedbacks dos alunos da Faculdade de Computação sobre
+                seus respectivos cursos. Entendemos que a experiência acadêmica
+                vai muito além das salas de aula e dos materiais didáticos. Por
+                isso, queremos ouvir diretamente dos alunos suas opiniões,
+                críticas e sugestões.
+              </p>
+              <p>
+                Acreditamos que, para alcançar um ensino de qualidade, é
+                fundamental incorporar as visões e experiências dos próprios
+                estudantes. Ao oferecer uma plataforma dedicada a esse
+                propósito, o MinhaFACOMP possibilita que cada aluno tenha um
+                papel ativo na construção de um ambiente acadêmico mais
+                dinâmico, participativo e eficiente.
+              </p>
+            </div>
+            <div className="section-logo-content">
+              <img src={minhaFacompLogo} alt="Logo MinhaFacomp" />
+            </div>
           </div>
-          <div className="section-logo-content">
-            <img src={minhaFacompLogo} alt="Logo MinhaFacomp" />
+        </section>
+
+        <section className="features-page">
+          <h2>Principais Funcionalidades</h2>
+          <div className="features-cards">
+            <div className="features-cards-content">
+              <ChatsCircle size={100} className="features-icons" />
+
+              <h3>Coleta de Feedback</h3>
+              <p>
+                Uma maneira simples e eficaz para os alunos compartilharem suas
+                opiniões e sugestões.
+              </p>
+            </div>
+            <div className="features-cards-content">
+              <ArrowsClockwise size={100} className="features-icons" />
+              <h3>Perguntas Rápidas e Diretas</h3>
+              <p>
+                O MinhaFACOMP facilita o feedback com perguntas rápidas de
+                múltipla escolha, permitindo que alunos avaliem cursos e
+                professores de forma ágil, promovendo melhorias no ensino.
+              </p>
+            </div>
           </div>
         </section>
       </main>
