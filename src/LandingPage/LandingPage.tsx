@@ -23,10 +23,10 @@ const LandingPage = () => {
         </div>
         <div className="nav-items">
           <div className="nav-links">
-            <a href="#">Início</a>
-            <a href="#">Sobre</a>
-            <a href="#">Funcionalidades</a>
-            <a href="#">Parceiros</a>
+            <a href="#header">Início</a>
+            <a href="#about">Sobre</a>
+            <a href="#feature">Funcionalidades</a>
+            <a href="#support">Parceiros</a>
           </div>
           <div className="nav-buttons">
             <button className="button-access">Acessar Plataforma</button>
@@ -38,7 +38,7 @@ const LandingPage = () => {
       </nav>
 
       {/* MAIN CONTENT */}
-      <main className="container-page">
+      <main className="container-page" id="header">
         {/* HEADER */}
         <header className="header-page">
           <div className="header-items">
@@ -56,7 +56,7 @@ const LandingPage = () => {
             </p>
             <button className="button-participate">Participe Agora!</button>
             <div className="image-minhaFacomp-header">
-              <figure>
+              <figure id="about">
                 <img src={minhaFacompImage} alt="Imagem do Minha Facomp" />
               </figure>
             </div>
@@ -91,7 +91,7 @@ const LandingPage = () => {
           </div>
         </section>
 
-        <section className="features-page">
+        <section className="features-page" id="feature">
           <h2>Principais Funcionalidades</h2>
           <div className="features-cards">
             <div className="features-cards-content">
@@ -115,7 +115,7 @@ const LandingPage = () => {
           </div>
         </section>
 
-        <section className="support-page">
+        <section className="support-page" id="support">
           <h2>Parceiros</h2>
           <div className="support-image-content">
             <div className="support-image-item">
@@ -135,7 +135,7 @@ const LandingPage = () => {
       </main>
 
       {/* FOOTER */}
-      <footer className="footer-container">
+      <footer className="footer-container" id="footer">
         <img src={minhaFacompLogo} alt="logo minhaFacomp" />
         <p>&copy; 2024</p>
       </footer>

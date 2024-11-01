@@ -108,8 +108,7 @@
 }
 
 .container-page {
-  /* height: 100%; */
-  padding: 0 4rem;
+  padding: 0 2rem;
   width: 100%;
   margin: 0 auto;
   max-width: 1500px;
@@ -188,7 +187,6 @@
 .about-page {
   display: flex;
   flex-direction: column;
-
   gap: 3rem;
   width: 100%;
   max-width: 1200px;
@@ -341,7 +339,62 @@
   color: var(--text-theme-2);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 879px) {
+  .nav-container {
+    padding: 1rem 2rem;
+  }
+  .logo-FACOMP {
+    width: 8rem;
+  }
+  .button-access {
+    width: 145px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+  .nav-buttons {
+    gap: 1.5rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .title-page {
+    font-size: 2.7rem;
+  }
+  .text-header-page {
+    font-size: 1.6rem;
+  }
+  .about-page h2 {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+  .section-about {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .section-about-content {
+    width: 100%;
+  }
+  .section-about-content p {
+    font-size: 1.5rem;
+  }
+  .section-logo-content img {
+    width: 60%;
+  }
+  .features-cards {
+    width: 100%;
+    flex-direction: column;
+  }
+  .features-page h2 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .support-image-content {
+    flex-direction: column;
+  }
+  .support-page h2 {
+    font-size: 2.4rem;
+  }
 }
 
 @keyframes showLogosAnimation {
