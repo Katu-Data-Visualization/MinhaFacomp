@@ -8,10 +8,6 @@ import ufpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-ufpa.png";
 import katudvLogo from "../MinhaFacompV2Components/Assets/imgs/logo-katu-dv.svg";
 
 import { ArrowsClockwise, ChatsCircle, Moon } from "@phosphor-icons/react";
-// import {
-//   ArrowsClockwiseIcon,
-//   FeedbackIcon,
-// } from "../MinhaFacompV2Components/Assets/imgs/exportSVG";
 
 const LandingPage = () => {
   return (
@@ -123,19 +119,26 @@ const LandingPage = () => {
           <h2>Parceiros</h2>
           <div className="support-image-content">
             <div className="support-image-item">
-              <img src={computacaoUfpaLogo} alt="" />
+              <img
+                src={computacaoUfpaLogo}
+                alt="logo faculdade de computação UFPA"
+              />
             </div>
             <div className="support-image-item">
-              <img src={ufpaLogo} alt="" />
+              <img src={ufpaLogo} alt="logo Universidade Federal do Pará" />
             </div>
             <div className="support-image-item">
-              <img src={katudvLogo} alt="" />
+              <img src={katudvLogo} alt="logo KatuDv" />
             </div>
           </div>
         </section>
-
-        {/* FOOTER */}
       </main>
+
+      {/* FOOTER */}
+      <footer className="footer-container">
+        <img src={minhaFacompLogo} alt="logo minhaFacomp" />
+        <p>&copy; 2024</p>
+      </footer>
     </div>
   );
 };

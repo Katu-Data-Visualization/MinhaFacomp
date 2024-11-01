@@ -10,7 +10,6 @@
   overflow: auto;
 
   background-image: none;
-  padding: 0 4rem;
 }
 
 .nav-container {
@@ -110,6 +109,7 @@
 
 .container-page {
   /* height: 100%; */
+  padding: 0 4rem;
   width: 100%;
   margin: 0 auto;
   max-width: 1500px;
@@ -318,6 +318,27 @@
 
   cursor: pointer;
   opacity: 65%;
+}
+
+.footer-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 8rem;
+  padding: 1.4rem 0;
+  border-top: 2px solid var(--text-border-gray);
+}
+
+.footer-container img {
+  width: 80px;
+}
+
+.footer-container p {
+  font-size: 1.2rem;
+  color: var(--text-theme-2);
 }
 
 @media screen and (min-width: 768px) {
