@@ -3,7 +3,7 @@
   width: 100vw;
   height: 100dvh;
   font-size: 1.6rem;
-  background-color: #ffffff;
+  background-color: var(--background-theme);
 
   display: block;
 
@@ -21,7 +21,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ffffff;
+  background-color: var(--background-theme);
   padding: 1rem 4rem;
   border-bottom: 2px solid var(--text-border-gray);
 }
@@ -55,7 +55,7 @@
 }
 
 .nav-links a {
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
   text-decoration: none;
   color: var(--text-theme-2);
   transition: ease-in-out 0.2s;
@@ -63,7 +63,7 @@
 
 .nav-links a:hover {
   cursor: pointer;
-  border-bottom: 2px solid var(--text-border-blue);
+  border-bottom: 3px solid var(--text-border-blue);
   transition: ease-in-out 0.2s;
 }
 
@@ -78,6 +78,7 @@
   width: 185px;
   height: 44px;
   background-color: var(--text-background-theme-1);
+  color: var(--text-theme-5);
   border-radius: 5px;
   border: 2px solid var(--text-border-blue);
   font-weight: 500;
@@ -98,6 +99,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--text-background-theme-1);
+  color: var(--text-theme-5);
   border-radius: 50%;
   border: 2px solid var(--text-border-blue);
   box-shadow: 0px 1px 1px 1px var(--text-shadow-theme-1);
@@ -138,6 +140,7 @@
   font-weight: 400;
   font-size: 3.7rem;
   text-align: center;
+  color: var(--text-theme-2);
 }
 
 .text-facomp {
@@ -148,6 +151,7 @@
   text-align: center;
   font-size: 1.8rem;
   font-weight: 400;
+  color: var(--text-theme-2);
 }
 
 .text-header-page .text-facomp {
@@ -173,13 +177,14 @@
 }
 
 .image-minhaFacomp-header {
-  border: 2px solid var(--text-border-blue);
+  border: 3px solid var(--text-border-blue);
   border-radius: 5px;
   width: 100%;
   max-width: 1200px;
 }
 
 .image-minhaFacomp-header figure img {
+  border-radius: 2px;
   width: 100%;
   display: block;
 }
@@ -209,11 +214,13 @@
   text-align: start;
   font-size: 2.8rem;
   font-weight: 400;
+  color: var(--text-theme-2);
 }
 
 .section-about-content p {
   font-weight: 400;
   text-align: justify;
+  color: var(--text-theme-2);
 }
 
 .section-logo-content {
@@ -237,6 +244,7 @@
 .features-page h2 {
   font-size: 2.8rem;
   font-weight: 400;
+  color: var(--text-theme-2);
 }
 
 .features-cards {
@@ -265,6 +273,7 @@
 }
 
 .features-cards-content h3 {
+  color: var(--text-theme-2);
   font-weight: 500;
 }
 
@@ -282,6 +291,7 @@
 }
 
 .support-page h2 {
+  color: var(--text-theme-2);
   font-size: 2.8rem;
   font-weight: 400;
   text-align: center;
@@ -303,6 +313,7 @@
   height: 150px;
   border-radius: 16px;
   border: 2px solid var(--text-border-gray-theme-2);
+  background-color: var(--text-background-theme-3);
   box-shadow: 0px 0px 5px 0px var(--text-shadow-theme-1);
   transition: ease-in-out 0.2s;
 }

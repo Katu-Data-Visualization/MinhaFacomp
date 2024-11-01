@@ -3,13 +3,26 @@ import "./LandingPage.css";
 import logoFACOMPsvg from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg.svg";
 import minhaFacompImage from "../MinhaFacompV2Components/Assets/imgs/minhaFacomp.png";
 import minhaFacompLogo from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg-simple.svg";
-import computacaoUfpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-computacao-ufpa.jpg";
+import computacaoUfpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-computacao-ufpa-removebg.png";
 import ufpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-ufpa.png";
-import katudvLogo from "../MinhaFacompV2Components/Assets/imgs/logo-katu-dv.svg";
 
 import { ArrowsClockwise, ChatsCircle, Moon } from "@phosphor-icons/react";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import {
+  KatudvLogoDark,
+  KatudvLogoLight,
+} from "../MinhaFacompV2Components/Assets/imgs/exportSVG";
 
 const LandingPage = () => {
+  const navigate = useNavigate();
+
+  const [theme, setTheme] = useState(false);
+
+  theme
+    ? window.document.body.classList.add("dark-theme")
+    : window.document.body.classList.remove("dark-theme");
+
   return (
     <div className="container-LandingPage">
       {/* NAVIGATION */}
@@ -29,8 +42,13 @@ const LandingPage = () => {
             <a href="#support">Parceiros</a>
           </div>
           <div className="nav-buttons">
-            <button className="button-access">Acessar Plataforma</button>
-            <button className="button-toggle-theme">
+            <button onClick={() => navigate("/home")} className="button-access">
+              Acessar Plataforma
+            </button>
+            <button
+              onClick={() => setTheme(!theme)}
+              className="button-toggle-theme"
+            >
               <Moon className="icon-toggle-theme" size={24} />
             </button>
           </div>
@@ -54,7 +72,12 @@ const LandingPage = () => {
               colaborativo. Junte-se a nós na construção de um futuro acadêmico
               mais rico e inclusivo, onde sua voz é ouvida e valorizada.
             </p>
-            <button className="button-participate">Participe Agora!</button>
+            <button
+              onClick={() => navigate("/home")}
+              className="button-participate"
+            >
+              Participe Agora!
+            </button>
             <div className="image-minhaFacomp-header">
               <figure id="about">
                 <img src={minhaFacompImage} alt="Imagem do Minha Facomp" />
@@ -119,16 +142,22 @@ const LandingPage = () => {
           <h2>Parceiros</h2>
           <div className="support-image-content">
             <div className="support-image-item">
-              <img
-                src={computacaoUfpaLogo}
-                alt="logo faculdade de computação UFPA"
-              />
+              <a href="https://computacao.ufpa.br/" target="_blank">
+                <img
+                  src={computacaoUfpaLogo}
+                  alt="logo faculdade de computação UFPA"
+                />
+              </a>
             </div>
             <div className="support-image-item">
-              <img src={ufpaLogo} alt="logo Universidade Federal do Pará" />
+              <a href="https://ufpa.br/" target="_blank">
+                <img src={ufpaLogo} alt="logo Universidade Federal do Pará" />
+              </a>
             </div>
             <div className="support-image-item">
-              <img src={katudvLogo} alt="logo KatuDv" />
+              <a href="https://katudv.com/" target="_blank">
+                {!theme ? <KatudvLogoDark /> : <KatudvLogoLight />}
+              </a>
             </div>
           </div>
         </section>
