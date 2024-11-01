@@ -3,6 +3,9 @@ import "./LandingPage.css";
 import logoFACOMPsvg from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg.svg";
 import minhaFacompImage from "../MinhaFacompV2Components/Assets/imgs/minhaFacomp.png";
 import minhaFacompLogo from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg-simple.svg";
+import computacaoUfpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-computacao-ufpa.jpg";
+import ufpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-ufpa.png";
+import katudvLogo from "../MinhaFacompV2Components/Assets/imgs/logo-katu-dv.svg";
 
 import { ArrowsClockwise, ChatsCircle, Moon } from "@phosphor-icons/react";
 // import {
@@ -115,6 +118,23 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
+
+        <section className="support-page">
+          <h2>Parceiros</h2>
+          <div className="support-image-content">
+            <div className="support-image-item">
+              <img src={computacaoUfpaLogo} alt="" />
+            </div>
+            <div className="support-image-item">
+              <img src={ufpaLogo} alt="" />
+            </div>
+            <div className="support-image-item">
+              <img src={katudvLogo} alt="" />
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER */}
       </main>
     </div>
   );
