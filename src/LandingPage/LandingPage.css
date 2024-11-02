@@ -350,6 +350,18 @@
   color: var(--text-theme-2);
 }
 
+@media screen and (max-width: 1200px) {
+  .features-cards-content {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .features-cards-content {
+    height: 390px;
+  }
+}
+
 @media screen and (max-width: 879px) {
   .nav-container {
     padding: 1rem 2rem;
