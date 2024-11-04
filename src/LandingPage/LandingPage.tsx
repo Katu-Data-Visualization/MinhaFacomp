@@ -1,6 +1,7 @@
 import "./LandingPage.css";
 
-import logoFACOMPsvg from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg.svg";
+import logoFACOMPsvgLight from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg-Light.svg";
+import logoFACOMPsvgDark from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg-Dark.svg";
 import minhaFacompImage from "../MinhaFacompV2Components/Assets/imgs/minhaFacomp.png";
 import minhaFacompLogo from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg-simple.svg";
 import computacaoUfpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-computacao-ufpa-removebg.png";
@@ -63,7 +64,10 @@ const LandingPage = () => {
             <div className="logo-container">
               <figure className="logo-FACOMP">
                 <a href="https://computacao.ufpa.br/" target="_blank">
-                  <img src={logoFACOMPsvg} alt="Logo da FACOMP" />
+                  <img
+                    src={!theme ? logoFACOMPsvgLight : logoFACOMPsvgDark}
+                    alt="Logo da FACOMP"
+                  />
                 </a>
               </figure>
             </div>

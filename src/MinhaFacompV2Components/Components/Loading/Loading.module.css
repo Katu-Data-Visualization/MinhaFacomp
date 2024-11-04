@@ -1,4 +1,4 @@
-.container{
+.container {
   width: 100%;
   height: 100%;
 
@@ -19,10 +19,10 @@
 
   clip-path: circle(100% at center center);
 
-  transition: all .7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
-.illustration{
+.illustration {
   width: 90%;
   max-width: 30rem;
 
@@ -33,16 +33,15 @@
   position: relative;
 }
 
-.illustration svg{
+.illustration svg {
   width: 100%;
 }
 
-.hidePonteiro{
+.hidePonteiro {
   display: none;
 }
 
-.illustration .ponteiro{
-
+.illustration .ponteiro {
   max-width: 2.3rem;
 
   position: absolute;
@@ -52,12 +51,12 @@
   animation: ponteiroAnimation 1.4s linear alternate infinite;
 }
 
-.hideLoading{
+.hideLoading {
   clip-path: circle(0% at center center);
 }
 
 @keyframes ponteiroAnimation {
-  to{
+  to {
     transform: rotate(90deg);
   }
 }
