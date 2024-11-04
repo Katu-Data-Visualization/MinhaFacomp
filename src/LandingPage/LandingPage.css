@@ -315,6 +315,13 @@
   border: 2px solid var(--text-border-gray-theme-2);
   background-color: var(--text-background-theme-3);
   box-shadow: 0px 0px 5px 0px var(--text-shadow-theme-1);
+  transition: ease-in-out 0.2s;
+}
+
+.support-image-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .support-image-item img {
@@ -322,6 +329,7 @@
 }
 
 .support-image-item:hover {
+  transition: ease-in-out 0.2s;
   cursor: pointer;
   opacity: 65%;
 }
@@ -351,22 +359,22 @@
   opacity: 0;
   filter: blur(15px);
   transform: translateX(-100%);
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .show {
   opacity: 1;
   filter: blur(0px);
   transform: translateX(0%);
-  transition: all 1.5s;
+  transition: all 1s;
 }
 
 .image-support-2 {
-  transition-delay: 400ms;
+  transition-delay: 300ms;
 }
 
 .image-support-3 {
-  transition-delay: 700ms;
+  transition-delay: 600ms;
 }
 
 @media screen and (max-width: 1200px) {
