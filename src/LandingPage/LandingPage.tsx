@@ -6,13 +6,15 @@ import minhaFacompLogo from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-
 import computacaoUfpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-computacao-ufpa-removebg.png";
 import ufpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-ufpa.png";
 
-import { ArrowsClockwise, ChatsCircle, Moon } from "@phosphor-icons/react";
+import { ArrowsClockwise, ChatsCircle, Moon, Sun } from "@phosphor-icons/react";
+
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import {
   KatudvLogoDark,
   KatudvLogoLight,
 } from "../MinhaFacompV2Components/Assets/imgs/exportSVG";
+
 import LoadingLandingPage from "./components/LoadingLandingPage";
 
 const LandingPage = () => {
@@ -22,13 +24,30 @@ const LandingPage = () => {
   const [loading, setLoading] = useState(true);
   const [showLandingPage, setShowLandingPage] = useState(false);
 
+  // Animations
+  const headerItemsElements = document.querySelectorAll(".hidden")!;
+
+  const myHeaderElementsObserver = new IntersectionObserver((entries) => {
+    entries.forEach((item) => {
+      if (item.isIntersecting) {
+        item.target.classList.add("show");
+      } else {
+        item.target.classList.remove("show");
+      }
+    });
+  });
+
+  headerItemsElements.forEach((elementHeader) => {
+    myHeaderElementsObserver.observe(elementHeader);
+  });
+
   setTimeout(() => {
     setLoading(false);
   }, 3000);
 
   setTimeout(() => {
     setShowLandingPage(true);
-  }, 1000);
+  }, 2400);
 
   theme
     ? window.document.body.classList.add("dark-theme")
@@ -66,7 +85,11 @@ const LandingPage = () => {
                   onClick={() => setTheme(!theme)}
                   className="button-toggle-theme"
                 >
-                  <Moon className="icon-toggle-theme" size={24} />
+                  {!theme ? (
+                    <Moon className="icon-toggle-theme" size={24} />
+                  ) : (
+                    <Sun className="icon-toggle-theme" size={24} />
+                  )}
                 </button>
               </div>
             </div>
@@ -77,11 +100,11 @@ const LandingPage = () => {
             {/* HEADER */}
             <header className="header-page">
               <div className="header-items">
-                <h1 className="title-page">
+                <h1 className="title-page hidden">
                   Uma nova maneira de aprimorar a experiência acadêmica na{" "}
                   <span className="text-facomp">Faculdade de Computação</span>
                 </h1>
-                <p className="text-header-page">
+                <p className="text-header-page hidden">
                   Transforme a maneira como alunos e professores se conectam e
                   compartilham feedback. Com o{" "}
                   <span className="text-facomp">MinhaFACOMP</span>, você pode
@@ -92,11 +115,11 @@ const LandingPage = () => {
                 </p>
                 <button
                   onClick={() => navigate("/home")}
-                  className="button-participate"
+                  className="button-participate hidden"
                 >
                   Participe Agora!
                 </button>
-                <div className="image-minhaFacomp-header">
+                <div className="image-minhaFacomp-header hidden">
                   <figure id="about">
                     <img src={minhaFacompImage} alt="Imagem do Minha Facomp" />
                   </figure>
@@ -105,7 +128,7 @@ const LandingPage = () => {
             </header>
 
             {/* CONTENT */}
-            <section className="about-page">
+            <section className="about-page hidden">
               <h2>Sobre o MinhaFACOMP</h2>
               <div className="section-about">
                 <div className="section-about-content">
@@ -132,7 +155,7 @@ const LandingPage = () => {
               </div>
             </section>
 
-            <section className="features-page" id="feature">
+            <section className="features-page hidden" id="feature">
               <h2>Principais Funcionalidades</h2>
               <div className="features-cards">
                 <div className="features-cards-content">
@@ -156,10 +179,10 @@ const LandingPage = () => {
               </div>
             </section>
 
-            <section className="support-page" id="support">
+            <section className="support-page hidden" id="support">
               <h2>Parceiros</h2>
               <div className="support-image-content">
-                <div className="support-image-item">
+                <div className="support-image-item hidden">
                   <a href="https://computacao.ufpa.br/" target="_blank">
                     <img
                       src={computacaoUfpaLogo}
@@ -167,7 +190,7 @@ const LandingPage = () => {
                     />
                   </a>
                 </div>
-                <div className="support-image-item">
+                <div className="support-image-item image-support-2 hidden ">
                   <a href="https://ufpa.br/" target="_blank">
                     <img
                       src={ufpaLogo}
@@ -175,7 +198,7 @@ const LandingPage = () => {
                     />
                   </a>
                 </div>
-                <div className="support-image-item">
+                <div className="support-image-item image-support-3 hidden ">
                   <a href="https://katudv.com/" target="_blank">
                     {!theme ? <KatudvLogoDark /> : <KatudvLogoLight />}
                   </a>
