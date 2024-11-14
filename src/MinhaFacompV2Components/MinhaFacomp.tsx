@@ -25,8 +25,6 @@ export default function MinhaFacomp() {
   const [changeBttnColor, setChangeBttnColor] = useState<boolean>(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState<boolean>(false);
 
-  console.log("testing commit");
-
   function sendMatricula(inputValue: string) {
     setShowIconButtonLoading(true);
     setTimeout(() => {

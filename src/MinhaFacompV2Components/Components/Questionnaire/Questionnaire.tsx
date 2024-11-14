@@ -21,18 +21,20 @@ export default function Questionnaire({
   const [checkedQuestionsNumber, setCheckedQuestionsNumber] =
     useState<number>(0);
 
-  const [respostas, setRespostas] = useState<{}>({});
+  const [respostas, setRespostas] = useState<
+    { category: string; pergunta: string; resposta: any }[]
+  >([]);
 
-  function handlResposta(e: any) {
-    let respAux: any = respostas;
+  function handlResposta(e: any, category: string, question: string) {
+    const newRespostas = [...respostas];
 
-    if (e.target.localName === "textarea") {
-      respAux[`questao${currentQuestion + 1}`] = e.target.value;
-    } else {
-      respAux[`questao${currentQuestion + 1}`] = e.target.id;
-    }
+    newRespostas[currentQuestion] = {
+      category,
+      pergunta: question,
+      resposta: e.target.value,
+    };
 
-    setRespostas(respAux);
+    setRespostas(newRespostas);
 
     let totalQuestionCheckedAux: any = totalQuestionChecked;
 
@@ -382,6 +384,7 @@ export default function Questionnaire({
                 // Aqui envia as respostas ao backend
                 setTimeout(() => {
                   finishQuestionnaire();
+                  console.log(JSON.stringify(respostas));
                   console.log(respostas);
                 }, 3000);
               }}

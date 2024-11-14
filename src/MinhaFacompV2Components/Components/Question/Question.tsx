@@ -6,7 +6,7 @@ interface QuestionProps {
   category: string;
   question: string;
   questionNumber: number;
-  handlResposta: (e: any) => void;
+  handlResposta: (e: any, category: string, question: string) => void;
   questionType: number;
 }
 
@@ -41,9 +41,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Todos"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-1`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Todos</span>
             </li>
@@ -57,9 +58,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Parcialmente"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-2`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Parcialmente</span>
             </li>
@@ -73,9 +75,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Nenhum"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-3`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Nenhum</span>
             </li>
@@ -94,9 +97,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Sim"}
                 name={`q${questionNumber}`}
-                id={`q${questionNumber}-2`}
-                onChange={(e) => handlResposta(e)}
+                id={`q${questionNumber}-1`}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Sim</span>
             </li>
@@ -110,9 +114,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Não"}
                 name={`q${questionNumber}`}
-                id={`q${questionNumber}-3`}
-                onChange={(e) => handlResposta(e)}
+                id={`q${questionNumber}-2`}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Não</span>
             </li>
@@ -131,9 +136,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Discordo totalmente"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-1`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Discordo totalmente</span>
             </li>
@@ -147,9 +153,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Discordo"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-2`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Discordo</span>
             </li>
@@ -163,9 +170,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Neutro"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-3`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Neutro</span>
             </li>
@@ -179,9 +187,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Concordo"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-3`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Concordo</span>
             </li>
@@ -195,9 +204,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Concordo Totalmente"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-3`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Concordo totalmente</span>
             </li>
@@ -208,7 +218,7 @@ export default function Question({
           <>
             <textarea
               className={styles.textBox}
-              onChange={(e) => handlResposta(e)}
+              onChange={(e) => handlResposta(e, category, question)}
               name={`q${questionNumber}`}
               id={`q${questionNumber}-textBox`}
               placeholder="Digite aqui"
@@ -228,9 +238,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Satisfeito"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-1`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Satisfeito</span>
             </li>
@@ -244,9 +255,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Insastifeito"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-2`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Insastifeito</span>
             </li>
@@ -260,9 +272,10 @@ export default function Question({
             >
               <input
                 type="radio"
+                value={"Neutro"}
                 name={`q${questionNumber}`}
                 id={`q${questionNumber}-3`}
-                onChange={(e) => handlResposta(e)}
+                onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Neutro</span>
             </li>
