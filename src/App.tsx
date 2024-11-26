@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MinhaFacomp from "./MinhaFacompV2Components/MinhaFacomp";
 import LandingPage from "./LandingPage/LandingPage";
+import NotFoundPage from "./NotFoundPage/NotFoundPage";
 
 const router = createBrowserRouter(
   [
@@ -11,6 +12,10 @@ const router = createBrowserRouter(
     {
       path: "/",
       element: <LandingPage />,
+    },
+    {
+      path: "*",
+      element: <NotFoundPage />,
     },
   ],
   {
