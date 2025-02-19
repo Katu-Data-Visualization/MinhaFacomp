@@ -48,7 +48,7 @@
   bottom: -5rem;
 
   transform: rotate(-90deg);
-  animation: ponteiroAnimation 1.4s linear alternate infinite;
+  animation: ponteiroAnimation 1s linear alternate infinite;
 }
 
 .hideLoading {
