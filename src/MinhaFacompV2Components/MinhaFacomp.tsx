@@ -25,22 +25,30 @@ export default function MinhaFacomp() {
   const [changeBttnColor, setChangeBttnColor] = useState<boolean>(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState<boolean>(false);
 
-  function sendMatricula(inputValue: string) {
+  function showQuestionary() {
     setShowIconButtonLoading(true);
     setTimeout(() => {
-      if (inputValue === "123456789000") {
-        setChangeBttnColor(true);
+      setTimeout(() => {
+        setShowQuestionnaire(true);
         setTimeout(() => {
-          setShowQuestionnaire(true);
-          setTimeout(() => {
-            setShowIconButtonLoading(false);
-            setChangeBttnColor(false);
-          }, 1000);
-        }, 2000);
-      } else {
-        setShowErrorScreen(true);
-        setTimeout(() => setShowIconButtonLoading(false), 1000);
-      }
+          setShowIconButtonLoading(false);
+          setChangeBttnColor(false);
+        }, 1000);
+      }, 2000);
+
+      // if (inputValue === "123456789000") {
+      //   setChangeBttnColor(true);
+      //   setTimeout(() => {
+      //     setShowQuestionnaire(true);
+      //     setTimeout(() => {
+      //       setShowIconButtonLoading(false);
+      //       setChangeBttnColor(false);
+      //     }, 1000);
+      //   }, 2000);
+      // } else {
+      //   setShowErrorScreen(true);
+      //   setTimeout(() => setShowIconButtonLoading(false), 1000);
+      // }
     }, 3000);
   }
 
@@ -72,7 +80,7 @@ export default function MinhaFacomp() {
       </div>
       <Home
         setShowQuestionnaire={setShowQuestionnaire}
-        sendMatricula={sendMatricula}
+        showQuestionary={showQuestionary}
         showIconButtonLoading={showIconButtonLoading}
         changeBttnColor={changeBttnColor}
       />
