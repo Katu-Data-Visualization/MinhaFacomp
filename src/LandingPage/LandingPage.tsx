@@ -2,7 +2,7 @@ import "./LandingPage.css";
 
 import logoFACOMPsvgLight from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg-Light.svg";
 import logoFACOMPsvgDark from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg-Dark.svg";
-import minhaFacompImage from "../MinhaFacompV2Components/Assets/imgs/minhaFacomp.png";
+import minhaFacompImage from "../MinhaFacompV2Components/Assets/imgs/screentShotMinhaFacomp.png";
 import minhaFacompLogo from "../MinhaFacompV2Components/Assets/imgs/logo-facomp-svg-simple.svg";
 import computacaoUfpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-computacao-ufpa-removebg.png";
 import ufpaLogo from "../MinhaFacompV2Components/Assets/imgs/logo-ufpa.png";
@@ -21,7 +21,7 @@ import LoadingLandingPage from "./components/LoadingLandingPage";
 const LandingPage = () => {
   const navigate = useNavigate();
 
-  const [theme, setTheme] = useState(false);
+  const [theme, setTheme] = useState(true);
   const [loading, setLoading] = useState(true);
   const [showLandingPage, setShowLandingPage] = useState(false);
 
