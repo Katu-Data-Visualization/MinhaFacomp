@@ -8,7 +8,13 @@ import Loading from "../Loading/Loading";
 import Question from "../Question/Question";
 
 interface QuestionnaireProps {
-  finishQuestionnaire: () => void;
+  finishQuestionnaire: (
+    respostas: {
+      category: string;
+      pergunta: string;
+      resposta: any;
+    }[]
+  ) => void;
 }
 
 export default function Questionnaire({
@@ -383,9 +389,7 @@ export default function Questionnaire({
 
                 // Aqui envia as respostas ao backend
                 setTimeout(() => {
-                  finishQuestionnaire();
-                  console.log(JSON.stringify(respostas));
-                  console.log(respostas);
+                  finishQuestionnaire(respostas);
                 }, 3000);
               }}
               //tabIndex={7}

@@ -26,33 +26,38 @@ export default function MinhaFacomp() {
   const [showSuccessScreen, setShowSuccessScreen] = useState<boolean>(false);
 
   function showQuestionary() {
-    setShowIconButtonLoading(true);
-    setTimeout(() => {
-      setTimeout(() => {
-        setShowQuestionnaire(true);
-        setTimeout(() => {
-          setShowIconButtonLoading(false);
-          setChangeBttnColor(false);
-        }, 1000);
-      }, 2000);
+    // setShowIconButtonLoading(true);
 
-      // if (inputValue === "123456789000") {
-      //   setChangeBttnColor(true);
-      //   setTimeout(() => {
-      //     setShowQuestionnaire(true);
-      //     setTimeout(() => {
-      //       setShowIconButtonLoading(false);
-      //       setChangeBttnColor(false);
-      //     }, 1000);
-      //   }, 2000);
-      // } else {
-      //   setShowErrorScreen(true);
-      //   setTimeout(() => setShowIconButtonLoading(false), 1000);
-      // }
-    }, 3000);
+    setShowQuestionnaire(true);
+    setTimeout(() => {
+      setShowIconButtonLoading(false);
+      setChangeBttnColor(false);
+    }, 1000);
+
+    // if (inputValue === "123456789000") {
+    //   setChangeBttnColor(true);
+    //   setTimeout(() => {
+    //     setShowQuestionnaire(true);
+    //     setTimeout(() => {
+    //       setShowIconButtonLoading(false);
+    //       setChangeBttnColor(false);
+    //     }, 1000);
+    //   }, 2000);
+    // } else {
+    //   setShowErrorScreen(true);
+    //   setTimeout(() => setShowIconButtonLoading(false), 1000);
+    // }
   }
 
-  function finishQuestionnaire() {
+  function finishQuestionnaire(
+    respostas: {
+      category: string;
+      pergunta: string;
+      resposta: any;
+    }[]
+  ) {
+    console.log(JSON.stringify(respostas));
+    console.log(respostas);
     console.log("ok");
     setShowSuccessScreen(true);
     setTimeout(() => setShowQuestionnaire(false), 1000);
