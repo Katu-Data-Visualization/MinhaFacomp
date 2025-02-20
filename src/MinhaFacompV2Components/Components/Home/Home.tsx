@@ -8,7 +8,6 @@ import IconButtonLoading from "../../Assets/IconButtonLoading/IconButtonLoading"
 
 interface HomeProps {
   setShowQuestionnaire?: any;
-  // sendMatricula: (inputValue: string) => void;
   showQuestionary: () => void;
   showIconButtonLoading: boolean;
   changeBttnColor: boolean;
@@ -38,36 +37,12 @@ export default function Home({
         </p>
       </div>
       <div className={styles.formMatricula}>
-        {/* <div className={styles.inputMatricula}>
-          <label htmlFor="NumeroDeMatricula">
-            Digite o seu número de matrícula para iniciar
-          </label>
-          <input
-            type="number"
-            name="NumeroDeMatricula"
-            id="NumeroDeMatricula"
-            placeholder="Ex.: 202404940001"
-            onChange={(e: any) => setInputValue(e.target.value)}
-            onKeyDown={(e) =>
-              e.key === "Enter" &&
-              inputValue.length > 11 &&
-              sendMatricula(inputValue)
-            }
-          />
-        </div> */}
         <button
-          // className={`${inputValue.length > 11 ? styles.showSendButton : ""} ${
-          //   changeBttnColor ? styles.success : ""
-          // }`}
           className={`${styles.showSendButton} ${
             changeBttnColor ? styles.success : ""
           }`}
           type="button"
-          // onClick={() => sendMatricula(inputValue)}
           onClick={showQuestionary}
-          // disabled={
-          //   inputValue.length > 11 && !showIconButtonLoading ? false : true
-          // }
         >
           {showIconButtonLoading && <IconButtonLoading />}
           {!showIconButtonLoading && "Começar"}

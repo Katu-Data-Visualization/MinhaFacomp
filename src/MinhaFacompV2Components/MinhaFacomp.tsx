@@ -16,6 +16,7 @@ import Home from "./Components/Home/Home";
 import Questionnaire from "./Components/Questionnaire/Questionnaire";
 import ErrorScreen from "./Components/ErrorScreen/ErrorScreen";
 import SuccessScreen from "./Components/SuccessScreen/SuccessScreen";
+import Loading from "./Components/Loading/Loading";
 
 export default function MinhaFacomp() {
   const [showQuestionnaire, setShowQuestionnaire] = useState<boolean>(false);
@@ -24,44 +25,57 @@ export default function MinhaFacomp() {
     useState<boolean>(false);
   const [changeBttnColor, setChangeBttnColor] = useState<boolean>(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState<boolean>(false);
+  const [hideLoading, setHideLoading] = useState<boolean>(true);
 
   function showQuestionary() {
     // setShowIconButtonLoading(true);
 
-    setShowQuestionnaire(true);
+    setHideLoading(false);
+    setTimeout(() => {
+      setHideLoading(true);
+      setShowQuestionnaire(true);
+    }, 2000);
+
     setTimeout(() => {
       setShowIconButtonLoading(false);
       setChangeBttnColor(false);
     }, 1000);
-
-    // if (inputValue === "123456789000") {
-    //   setChangeBttnColor(true);
-    //   setTimeout(() => {
-    //     setShowQuestionnaire(true);
-    //     setTimeout(() => {
-    //       setShowIconButtonLoading(false);
-    //       setChangeBttnColor(false);
-    //     }, 1000);
-    //   }, 2000);
-    // } else {
-    //   setShowErrorScreen(true);
-    //   setTimeout(() => setShowIconButtonLoading(false), 1000);
-    // }
   }
 
-  function finishQuestionnaire(
+  const finishQuestionnaire = async (
     respostas: {
       category: string;
       pergunta: string;
       resposta: any;
     }[]
-  ) {
-    console.log(JSON.stringify(respostas));
-    console.log(respostas);
-    console.log("ok");
-    setShowSuccessScreen(true);
-    setTimeout(() => setShowQuestionnaire(false), 1000);
-  }
+  ) => {
+    try {
+      setHideLoading(false);
+      const data = await fetch("http://localhost:4011/api/minhafacomp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(respostas),
+      });
+
+      if (!data.ok) {
+        setShowErrorScreen(true);
+        setShowQuestionnaire(false);
+        setShowSuccessScreen(false);
+        return;
+      }
+
+      // const responseData = await data.json();
+
+      // console.log(responseData);
+
+      setShowQuestionnaire(false);
+      setShowSuccessScreen(true);
+    } catch (error) {
+      setShowErrorScreen(true);
+    } finally {
+      setHideLoading(true);
+    }
+  };
 
   function closeSuccessScreen() {
     setShowSuccessScreen(false);
@@ -69,6 +83,7 @@ export default function MinhaFacomp() {
 
   return (
     <main className="container">
+      <Loading hideLoading={hideLoading} />
       <div className="imageCredit">
         <Info />
         <a
