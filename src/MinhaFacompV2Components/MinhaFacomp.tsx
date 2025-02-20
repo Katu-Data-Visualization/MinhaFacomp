@@ -51,16 +51,19 @@ export default function MinhaFacomp() {
   ) => {
     try {
       setHideLoading(false);
-      const data = await fetch("http://localhost:4011/api/minhafacomp", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(respostas),
-      });
+      const data = await fetch(
+        "https://minhafacomp-proxy-api.vercel.app/api/minhafacomp",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(respostas),
+        }
+      );
 
       if (!data.ok) {
-        setShowErrorScreen(true);
         setShowQuestionnaire(false);
         setShowSuccessScreen(false);
+        setShowErrorScreen(true);
         return;
       }
 
