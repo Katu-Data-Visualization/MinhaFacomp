@@ -7,7 +7,6 @@ RUN npm install
 
 COPY . .
 
-ARG BRANCH=main
 ENV BRANCH=$BRANCH
 
 CMD ["npm", "run", "dev"]
