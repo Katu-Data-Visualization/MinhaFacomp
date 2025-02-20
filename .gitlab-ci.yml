@@ -1,19 +1,41 @@
 stages:
   - build
+  - deploy
 
-build_and_run_dev:
+variables:
+  DOCKER_DRIVER: overlay2
+  IMAGE_NAME: "minhafacomp-${CI_COMMIT_REF_NAME}"
+
+build:
   stage: build
   image: docker:latest
   services:
     - docker:dind
-  variables:
-    DOCKER_DRIVER: overlay2
-    BRANCH: "dev"
-    PORT: 4001
   script:
-    - docker stop minhafacomp-dev || true
-    - docker rm minhafacomp-dev || true
-    - docker build -t minhafacomp-dev .
-    - docker run -d --name minhafacomp-dev -p $PORT:$PORT minhafacomp-dev
-  only:
-    - dev
+    - |
+      if [ "$CI_COMMIT_REF_NAME" == "main" ]; then
+        PORT=4012
+      elif [ "$CI_COMMIT_REF_NAME" == "dev" ]; then
+        PORT=4001
+      fi
+      docker stop "$IMAGE_NAME" || true
+      docker rm "$IMAGE_NAME" || true
+      docker build -t "$IMAGE_NAME" .
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main" || $CI_COMMIT_REF_NAME == "dev"'
+
+deploy:
+  stage: deploy
+  image: docker:latest
+  services:
+    - docker:dind
+  script:
+    - |
+      if [ "$CI_COMMIT_REF_NAME" == "main" ]; then
+        PORT=4012
+      elif [ "$CI_COMMIT_REF_NAME" == "dev" ]; then
+        PORT=4001
+      fi
+      docker run -d --name "$IMAGE_NAME" -p "$PORT:$PORT" "$IMAGE_NAME"
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "main" || $CI_COMMIT_REF_NAME == "dev"'
