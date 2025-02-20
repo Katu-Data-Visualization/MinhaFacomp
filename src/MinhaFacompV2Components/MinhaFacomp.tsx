@@ -51,6 +51,10 @@ export default function MinhaFacomp() {
   ) => {
     try {
       setHideLoading(false);
+
+      // Usando server local = http://localhost:4011/api/minhafacomp
+      // Usando uma api externa que chama a api de submit =
+
       const data = await fetch(
         "https://minhafacomp-proxy-api.vercel.app/api/minhafacomp",
         {
@@ -67,9 +71,9 @@ export default function MinhaFacomp() {
         return;
       }
 
-      // const responseData = await data.json();
+      const responseData = await data.json();
 
-      // console.log(responseData);
+      console.log(responseData);
 
       setShowQuestionnaire(false);
       setShowSuccessScreen(true);
