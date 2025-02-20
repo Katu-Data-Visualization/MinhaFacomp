@@ -11,10 +11,10 @@ import { ArrowsClockwise, ChatsCircle, Moon, Sun } from "@phosphor-icons/react";
 
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import {
-  KatudvLogoDark,
-  KatudvLogoLight,
-} from "../MinhaFacompV2Components/Assets/imgs/exportSVG";
+// import {
+//   KatudvLogoDark,
+//   KatudvLogoLight,
+// } from "../MinhaFacompV2Components/Assets/imgs/exportSVG";
 
 import LoadingLandingPage from "./components/LoadingLandingPage";
 
@@ -202,11 +202,11 @@ const LandingPage = () => {
                     />
                   </a>
                 </div>
-                <div className="support-image-item image-support-3 hidden ">
+                {/* <div className="support-image-item image-support-3 hidden ">
                   <a href="https://katudv.com/" target="_blank">
                     {!theme ? <KatudvLogoDark /> : <KatudvLogoLight />}
                   </a>
-                </div>
+                </div> */}
               </div>
             </section>
           </main>
