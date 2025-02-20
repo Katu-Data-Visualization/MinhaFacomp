@@ -3,26 +3,31 @@ import MinhaFacomp from "./MinhaFacompV2Components/MinhaFacomp";
 import LandingPage from "./LandingPage/LandingPage";
 import NotFoundPage from "./NotFoundPage/NotFoundPage";
 
+const branch = import.meta.env.VITE_BRANCH || 'dev';
+const isMainBranch = branch === 'main';
+
+const basename = isMainBranch ? "/" : "/d/minhafacomp/";
+
 const router = createBrowserRouter(
-  [
+    [
+        {
+            path: "/home",
+            element: <MinhaFacomp />,
+        },
+        {
+            path: "/",
+            element: <LandingPage />,
+        },
+        {
+            path: "*",
+            element: <NotFoundPage />,
+        },
+    ],
     {
-      path: "/home",
-      element: <MinhaFacomp />,
-    },
-    {
-      path: "/",
-      element: <LandingPage />,
-    },
-    {
-      path: "*",
-      element: <NotFoundPage />,
-    },
-  ],
-  {
-    basename: "/d/minhafacomp/",
-  }
+        basename,
+    }
 );
 
 export default function App() {
-  return <RouterProvider router={router} />;
+    return <RouterProvider router={router} />;
 }
