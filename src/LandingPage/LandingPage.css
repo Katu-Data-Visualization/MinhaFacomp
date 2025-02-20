@@ -1,0 +1,455 @@
+.container-LandingPage {
+  position: relative;
+  width: 100vw;
+  height: 100dvh;
+  font-size: 1.6rem;
+  background-color: var(--background-theme);
+
+  display: block;
+
+  overflow: auto;
+
+  background-image: none;
+}
+
+.nav-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--background-theme);
+  padding: 1rem 4rem;
+  border-bottom: 2px solid var(--text-border-gray);
+}
+
+.logo-container {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-FACOMP {
+  width: 10rem;
+}
+
+.logo-FACOMP img {
+  width: 100%;
+}
+
+.nav-items {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-links a {
+  border-bottom: 3px solid transparent;
+  text-decoration: none;
+  color: var(--text-theme-2);
+  transition: ease-in-out 0.2s;
+}
+
+.nav-links a:hover {
+  cursor: pointer;
+  border-bottom: 3px solid var(--text-border-blue);
+  transition: ease-in-out 0.2s;
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.button-access {
+  width: 185px;
+  height: 44px;
+  background-color: var(--text-background-theme-1);
+  color: var(--text-theme-5);
+  border-radius: 5px;
+  border: 2px solid var(--text-border-blue);
+  font-weight: 500;
+  transition: ease-in-out 0.1s;
+  box-shadow: 0px 1px 1px 1px var(--text-shadow-theme-1);
+}
+
+.button-access:hover {
+  cursor: pointer;
+  opacity: 65%;
+  transition: ease-in-out 0.1s;
+}
+
+.button-toggle-theme {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--text-background-theme-1);
+  color: var(--text-theme-5);
+  border-radius: 50%;
+  border: 2px solid var(--text-border-blue);
+  box-shadow: 0px 1px 1px 1px var(--text-shadow-theme-1);
+}
+
+.button-toggle-theme:hover {
+  cursor: pointer;
+}
+
+.container-page {
+  padding: 0 2rem;
+  width: 100%;
+  margin: 0 auto;
+  gap: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  max-width: 1200px;
+}
+
+.header-page {
+  margin-top: 14rem;
+}
+
+.header-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 5rem;
+}
+
+.title-page {
+  font-weight: 400;
+  font-size: 3.7rem;
+  text-align: center;
+  color: var(--text-theme-2);
+}
+
+.text-facomp {
+  color: var(--text-theme-3);
+}
+
+.text-header-page {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--text-theme-2);
+}
+
+.text-header-page .text-facomp {
+  font-weight: 600;
+}
+
+.button-participate {
+  width: 200px;
+  height: 44px;
+  color: var(--text-theme-1);
+  background-color: var(--text-background-theme-2);
+  border-radius: 5px;
+  border: 2px solid var(--text-border-black);
+  font-weight: 600;
+  transition: ease-in-out 0.1s;
+  box-shadow: 0px 1px 1px 1px var(--text-shadow-theme-1);
+}
+
+.button-participate:hover {
+  cursor: pointer;
+  opacity: 65%;
+  transition: ease-in-out 0.1s;
+}
+
+.image-minhaFacomp-header {
+  border: 3px solid var(--text-border-blue);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.image-minhaFacomp-header figure img {
+  border-radius: 2px;
+  width: 100%;
+  display: block;
+}
+
+.about-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.section-about {
+  display: flex;
+  gap: 6rem;
+}
+
+.section-about-content {
+  display: flex;
+  justify-content: stretch;
+  flex-direction: column;
+  gap: 3rem;
+  width: 60%;
+}
+
+.about-page h2 {
+  text-align: start;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--text-theme-2);
+}
+
+.section-about-content p {
+  font-weight: 400;
+  text-align: justify;
+  color: var(--text-theme-2);
+}
+
+.section-logo-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-logo-content img {
+  width: 80%;
+}
+
+.features-page {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.features-page h2 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--text-theme-2);
+}
+
+.features-cards {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.features-icons {
+  color: var(--text-theme-3);
+}
+
+.features-cards-content {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  padding: 3rem;
+  border: 2px solid var(--text-border-blue);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.features-cards-content h3 {
+  color: var(--text-theme-2);
+  font-weight: 500;
+}
+
+.features-cards-content p {
+  text-align: center;
+  color: var(--text-theme-6);
+}
+
+.support-page {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.support-page h2 {
+  color: var(--text-theme-2);
+  font-size: 2.8rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.support-image-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.support-image-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 16px;
+  border: 2px solid var(--text-border-gray-theme-2);
+  background-color: var(--text-background-theme-3);
+  box-shadow: 0px 0px 5px 0px var(--text-shadow-theme-1);
+  transition: ease-in-out 0.2s;
+}
+
+.support-image-item a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.support-image-item img {
+  width: 80px;
+}
+
+.support-image-item:hover {
+  transition: ease-in-out 0.2s;
+  cursor: pointer;
+  opacity: 65%;
+}
+
+.footer-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 8rem;
+  padding: 1.4rem 0;
+  border-top: 2px solid var(--text-border-gray);
+}
+
+.footer-container img {
+  width: 80px;
+}
+
+.footer-container p {
+  font-size: 1.2rem;
+  color: var(--text-theme-2);
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0%);
+  transition: all 1s;
+}
+
+.image-support-2 {
+  transition-delay: 300ms;
+}
+
+.image-support-3 {
+  transition-delay: 600ms;
+}
+
+@media screen and (max-width: 1200px) {
+  .features-cards-content {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .features-cards-content {
+    height: 390px;
+  }
+}
+
+@media screen and (max-width: 879px) {
+  .nav-container {
+    padding: 1rem 2rem;
+  }
+  .logo-FACOMP {
+    width: 8rem;
+  }
+  .button-access {
+    width: 145px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+  .nav-buttons {
+    gap: 1.5rem;
+  }
+  .nav-links {
+    display: none;
+  }
+  .title-page {
+    font-size: 2.7rem;
+  }
+  .text-header-page {
+    font-size: 1.6rem;
+  }
+  .about-page h2 {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+  .section-about {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .section-about-content {
+    width: 100%;
+  }
+  .section-about-content p {
+    font-size: 1.5rem;
+  }
+  .section-logo-content img {
+    width: 60%;
+  }
+  .features-cards {
+    width: 100%;
+    flex-direction: column;
+  }
+  .features-page h2 {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  .support-image-content {
+    flex-direction: column;
+  }
+  .support-page h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@keyframes showLogosAnimation {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

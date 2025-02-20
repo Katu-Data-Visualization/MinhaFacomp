@@ -1,4 +1,4 @@
-.container{
+.container {
   width: 100%;
   height: 100%;
 
@@ -16,14 +16,14 @@
   left: 0;
 
   clip-path: circle(0% at center center);
-  transition: all .7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
-.showErrorScreen{
+.showErrorScreen {
   clip-path: circle(150% at center center);
 }
 
-.errorMessage{
+.errorMessage {
   width: 90%;
   max-width: 50rem;
   background-color: var(--color-bg);
@@ -42,7 +42,7 @@
   user-select: none;
 }
 
-.errorMessage figure{
+.errorMessage figure {
   width: 100%;
   max-width: 10rem;
 
@@ -52,31 +52,31 @@
   top: -3.5rem;
 }
 
-.errorMessage figure img{
+.errorMessage figure img {
   width: 100%;
 }
 
-.errorMessage p{
+.errorMessage p {
   font-size: 1.8rem;
   line-height: 2.5rem;
 
-  font-weight: bold;
+  font-weight: normal;
 }
 
-.errorMessage button[type='button']{
+.errorMessage button[type="button"] {
   width: 100%;
   max-width: 25rem;
   border: 0;
   background-color: var(--color-primary);
   border-radius: 1.5rem;
   padding: 1.5rem;
-  color: #FFF;
+  color: #fff;
   font-size: 2rem;
   font-weight: bold;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
 
-.errorMessage button[type='button']:hover{
+.errorMessage button[type="button"]:hover {
   background-color: var(--color-bttn-hover);
 }

@@ -1,4 +1,4 @@
-.container{
+.container {
   width: 100%;
   height: 100%;
 
@@ -17,17 +17,17 @@
 
   z-index: 2;
   clip-path: circle(0% at center center);
-  transition: clip-path .8s ease-in-out;
+  transition: clip-path 0.8s ease-in-out;
 }
 
-.showSuccessScreen{
+.showSuccessScreen {
   clip-path: circle(150% at center center);
 }
 
-.successMessage{
+.successMessage {
   width: 90%;
   max-width: 50rem;
-  background-color: var(--color-bg);
+  background-color: #ffffffd6;
   color: var(--color-success);
   border-radius: 2rem;
   padding: 8.3rem 2rem 4rem;
@@ -43,7 +43,7 @@
   user-select: none;
 }
 
-.successMessage figure{
+.successMessage figure {
   width: 100%;
   max-width: 10rem;
 
@@ -53,26 +53,26 @@
   top: -3.5rem;
 }
 
-.successMessage figure img{
+.successMessage figure img {
   width: 100%;
 }
 
-.successMessage p{
+.successMessage p {
   font-size: 1.8rem;
   line-height: 2.5rem;
 
-  font-weight: bold;
+  font-weight: normal;
 }
 
-.successMessage button[type='button']{
+.successMessage button[type="button"] {
   width: 100%;
-  max-width: 25rem;
+  max-width: 20rem;
   border: 0;
   background-color: var(--color-primary);
   border-radius: 1.5rem;
-  padding: 1.5rem;
-  color: #FFF;
-  font-size: 2rem;
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
   font-weight: bold;
 
   display: flex;
@@ -80,11 +80,11 @@
   justify-content: center;
   gap: 1rem;
 
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   cursor: pointer;
 }
 
-.successMessage button[type='button']:hover{
+.successMessage button[type="button"]:hover {
   background-color: var(--color-bttn-hover);
 }

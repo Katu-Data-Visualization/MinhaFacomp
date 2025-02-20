@@ -1,6 +1,7 @@
 import { useState } from "react";
 
-import "./GlobalStyles.css";
+import "./MinhaFacomp.css";
+import "../GlobalStyles.css";
 
 import { Info } from "@phosphor-icons/react";
 
@@ -15,6 +16,7 @@ import Home from "./Components/Home/Home";
 import Questionnaire from "./Components/Questionnaire/Questionnaire";
 import ErrorScreen from "./Components/ErrorScreen/ErrorScreen";
 import SuccessScreen from "./Components/SuccessScreen/SuccessScreen";
+import Loading from "./Components/Loading/Loading";
 
 export default function MinhaFacomp() {
   const [showQuestionnaire, setShowQuestionnaire] = useState<boolean>(false);
@@ -23,40 +25,65 @@ export default function MinhaFacomp() {
     useState<boolean>(false);
   const [changeBttnColor, setChangeBttnColor] = useState<boolean>(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState<boolean>(false);
+  const [hideLoading, setHideLoading] = useState<boolean>(true);
 
-  console.log("testing commit");
+  function showQuestionary() {
+    // setShowIconButtonLoading(true);
 
-  function sendMatricula(inputValue: string) {
-    setShowIconButtonLoading(true);
+    setHideLoading(false);
     setTimeout(() => {
-      if (inputValue === "123456789000") {
-        setChangeBttnColor(true);
-        setTimeout(() => {
-          setShowQuestionnaire(true);
-          setTimeout(() => {
-            setShowIconButtonLoading(false);
-            setChangeBttnColor(false);
-          }, 1000);
-        }, 2000);
-      } else {
-        setShowErrorScreen(true);
-        setTimeout(() => setShowIconButtonLoading(false), 1000);
-      }
-    }, 3000);
+      setHideLoading(true);
+      setShowQuestionnaire(true);
+    }, 2000);
+
+    setTimeout(() => {
+      setShowIconButtonLoading(false);
+      setChangeBttnColor(false);
+    }, 1000);
   }
 
-  function finishQuestionnaire() {
-    console.log("ok");
-    setShowSuccessScreen(true);
-    setTimeout(() => setShowQuestionnaire(false), 1000);
-  }
+  const finishQuestionnaire = async (
+    respostas: {
+      category: string;
+      pergunta: string;
+      resposta: any;
+    }[]
+  ) => {
+    try {
+      setHideLoading(false);
+      const data = await fetch("http://localhost:4011/api/minhafacomp", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(respostas),
+      });
+
+      if (!data.ok) {
+        setShowErrorScreen(true);
+        setShowQuestionnaire(false);
+        setShowSuccessScreen(false);
+        return;
+      }
+
+      // const responseData = await data.json();
+
+      // console.log(responseData);
+
+      setShowQuestionnaire(false);
+      setShowSuccessScreen(true);
+    } catch (error) {
+      setShowErrorScreen(true);
+    } finally {
+      setHideLoading(true);
+    }
+  };
 
   function closeSuccessScreen() {
     setShowSuccessScreen(false);
   }
 
   return (
-    <>
+    <main className="container">
+      <Loading hideLoading={hideLoading} />
       <div className="imageCredit">
         <Info />
         <a
@@ -73,7 +100,7 @@ export default function MinhaFacomp() {
       </div>
       <Home
         setShowQuestionnaire={setShowQuestionnaire}
-        sendMatricula={sendMatricula}
+        showQuestionary={showQuestionary}
         showIconButtonLoading={showIconButtonLoading}
         changeBttnColor={changeBttnColor}
       />
@@ -100,6 +127,6 @@ export default function MinhaFacomp() {
           </a>
         </figure>
       </div>
-    </>
+    </main>
   );
 }
