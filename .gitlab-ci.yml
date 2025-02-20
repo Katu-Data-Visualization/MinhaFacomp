@@ -20,7 +20,7 @@ build:
       fi
       docker stop "$IMAGE_NAME" || true
       docker rm "$IMAGE_NAME" || true
-      docker build -t "$IMAGE_NAME" .
+      docker build --build-arg BRANCH="$CI_COMMIT_REF_NAME" -t "$IMAGE_NAME" .
   rules:
     - if: '$CI_COMMIT_REF_NAME == "main" || $CI_COMMIT_REF_NAME == "dev"'
 
