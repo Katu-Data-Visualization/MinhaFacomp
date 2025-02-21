@@ -80,7 +80,7 @@ const LandingPage = () => {
               </div>
               <div className="nav-buttons">
                 <button
-                  onClick={() => navigate("/home")}
+                  onClick={() => navigate("/questionario")}
                   className="button-access"
                 >
                   Acessar Plataforma
@@ -118,7 +118,7 @@ const LandingPage = () => {
                   valorizada.
                 </p>
                 <button
-                  onClick={() => navigate("/home")}
+                  onClick={() => navigate("/questionario")}
                   className="button-participate hidden"
                 >
                   Participe Agora!
