@@ -5,12 +5,10 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 const app = express();
-const PORT = process.env.PORT || 4011;
+const PORT = process.env.PORT || 4001;
 
-// Habilitar CORS para o preview do Vite (porta 4173)
 app.use(
   cors({
-    origin: ["http://localhost:4173"], // Permite requisições do preview do Vite
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"],
   })

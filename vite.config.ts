@@ -8,7 +8,7 @@ export default defineConfig(() => {
   return {
     plugins: [react()],
     server: {
-      port: isMainBranch ? 4012 : 4011,
+      port: isMainBranch ? 4012 : 4001,
       host: "0.0.0.0",
     },
     base: isMainBranch ? "/" : "/d/minhafacomp/",
