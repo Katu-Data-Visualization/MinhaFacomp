@@ -32,8 +32,10 @@ export default function Question({
 
       {descricao && (
         <div>
-          {descricao.map((question_list) => (
-            <p className={styles.descricao}>{question_list}</p>
+          {descricao.map((question_list, index) => (
+            <p key={index} className={styles.descricao}>
+              {question_list}
+            </p>
           ))}
         </div>
       )}
