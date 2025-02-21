@@ -88,229 +88,229 @@ export default function Questionnaire({
       caixa_de_texto: false,
       tipo_pergunta: 3,
     },
-    // {
-    //   categoria: "Comunicação",
-    //   pergunta:
-    //     "Você usa o site da FACOMP para consultar informações sobre procedimentos, como TCC, Estágio, Segunda Chamada ?",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 2,
-    // },
-    // {
-    //   categoria: "Comunicação",
-    //   pergunta:
-    //     "Se você utiliza o site da FACOMP, você ficou satisfeito com a explicação e a comunicação fornecidas ?",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 5,
-    // },
-    // {
-    //   categoria: "Comunicação",
-    //   pergunta:
-    //     "A comunicação da FACOMP sobre as oportunidades de estágio é eficiente para vagas INTERNAS.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Comunicação",
-    //   pergunta:
-    //     "A comunicação da FACOMP sobre as oportunidades de estágio é eficiente para vagas EXTERNAS.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Secretaria FACOMP",
-    //   pergunta:
-    //     "Os servidores da secretaria são corteses e educados durante o atendimento.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Secretaria FACOMP",
-    //   pergunta:
-    //     "A secretaria da Faculdade de Computação atende minhas solicitações de forma rápida e eficiente.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Secretaria FACOMP",
-    //   pergunta:
-    //     "As informações fornecidas pela secretaria são claras e compreensíveis.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Secretaria FACOMP",
-    //   pergunta:
-    //     "A secretaria está bem organizada tanto no ambiente quanto no horário de atendimento para as demandas dos alunos.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Secretaria FACOMP",
-    //   pergunta:
-    //     "As respostas da secretaria por e-mail ou outros meios de comunicação são rápidas e satisfatórias.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Secretaria FACOMP",
-    //   pergunta:
-    //     "Quando não fui atendido prontamente, a secretaria forneceu orientações suficientes para responder às minhas dúvidas ou me direcionar para a pessoa correta.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Secretaria FACOMP",
-    //   pergunta:
-    //     "Em caso de atraso no atendimento, a secretaria forneceu justificativas e prazos realistas para a resolução do meu problema.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Secretaria FACOMP",
-    //   pergunta:
-    //     "No geral, você está satisfeito com a qualidade do atendimento prestado pela secretaria da Faculdade de Computação ?",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 2,
-    // },
-    // {
-    //   categoria: "Atendimento - Direção FACOMP",
-    //   pergunta:
-    //     "A Direção da Faculdade de Computação atendeu minhas solicitações de forma eficiente e rápida.",
+    {
+      categoria: "Comunicação",
+      pergunta:
+        "Você usa o site da FACOMP para consultar informações sobre procedimentos, como TCC, Estágio, Segunda Chamada ?",
+      caixa_de_texto: false,
+      tipo_pergunta: 2,
+    },
+    {
+      categoria: "Comunicação",
+      pergunta:
+        "Se você utiliza o site da FACOMP, você ficou satisfeito com a explicação e a comunicação fornecidas ?",
+      caixa_de_texto: false,
+      tipo_pergunta: 5,
+    },
+    {
+      categoria: "Comunicação",
+      pergunta:
+        "A comunicação da FACOMP sobre as oportunidades de estágio é eficiente para vagas INTERNAS.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Comunicação",
+      pergunta:
+        "A comunicação da FACOMP sobre as oportunidades de estágio é eficiente para vagas EXTERNAS.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Secretaria FACOMP",
+      pergunta:
+        "Os servidores da secretaria são corteses e educados durante o atendimento.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Secretaria FACOMP",
+      pergunta:
+        "A secretaria da Faculdade de Computação atende minhas solicitações de forma rápida e eficiente.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Secretaria FACOMP",
+      pergunta:
+        "As informações fornecidas pela secretaria são claras e compreensíveis.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Secretaria FACOMP",
+      pergunta:
+        "A secretaria está bem organizada tanto no ambiente quanto no horário de atendimento para as demandas dos alunos.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Secretaria FACOMP",
+      pergunta:
+        "As respostas da secretaria por e-mail ou outros meios de comunicação são rápidas e satisfatórias.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Secretaria FACOMP",
+      pergunta:
+        "Quando não fui atendido prontamente, a secretaria forneceu orientações suficientes para responder às minhas dúvidas ou me direcionar para a pessoa correta.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Secretaria FACOMP",
+      pergunta:
+        "Em caso de atraso no atendimento, a secretaria forneceu justificativas e prazos realistas para a resolução do meu problema.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Secretaria FACOMP",
+      pergunta:
+        "No geral, você está satisfeito com a qualidade do atendimento prestado pela secretaria da Faculdade de Computação ?",
+      caixa_de_texto: false,
+      tipo_pergunta: 2,
+    },
+    {
+      categoria: "Atendimento - Direção FACOMP",
+      pergunta:
+        "A Direção da Faculdade de Computação atendeu minhas solicitações de forma eficiente e rápida.",
 
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Direção FACOMP",
-    //   pergunta:
-    //     "Os membros da Direção são acessíveis e abertos para atender as demandas dos alunos.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Direção FACOMP",
-    //   pergunta:
-    //     "As informações fornecidas pela Direção são claras e adequadas para resolver minhas questões acadêmicas.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Direção FACOMP",
-    //   pergunta:
-    //     "A Direção da Faculdade demonstrou transparência nas decisões que impactam os alunos.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Direção FACOMP",
-    //   pergunta:
-    //     "A Direção é proativa em buscar soluções para os problemas apresentados pelos alunos.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Direção FACOMP",
-    //   pergunta:
-    //     "Quando minha demanda não foi atendida imediatamente, a Direção forneceu orientações claras sobre os próximos passos.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Direção FACOMP",
-    //   pergunta:
-    //     "A Direção demonstrou disponibilidade e interesse em resolver questões acadêmicas ou administrativas que apresentei.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Direção FACOMP",
-    //   pergunta:
-    //     "A Direção tem fornecido feedback adequado sobre minhas demandas ou sugestões apresentadas.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Atendimento - Direção FACOMP",
-    //   pergunta:
-    //     "No geral, você está satisfeito com o atendimento e a gestão da Direção da Faculdade de Computação?",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 2,
-    // },
-    // {
-    //   categoria: "Perguntas sobre Pesquisa",
-    //   pergunta:
-    //     "Tenho conhecimento sobre os laboratórios de pesquisa disponíveis na Faculdade de Computação.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Perguntas sobre Pesquisa",
-    //   pergunta:
-    //     "Sei quais professores estão associados a cada laboratório de pesquisa da faculdade.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Perguntas sobre Pesquisa",
-    //   pergunta:
-    //     "As linhas de pesquisa dos professores da Faculdade de Computação são claramente divulgadas para os alunos.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Perguntas sobre Pesquisa",
-    //   pergunta:
-    //     "Tenho interesse em participar de um laboratório de pesquisa da Faculdade de Computação.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Perguntas sobre Pesquisa",
-    //   pergunta:
-    //     "Os professores da Faculdade de Computação informam regularmente sobre suas pesquisas e como os alunos podem participar.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Perguntas sobre Extensão",
-    //   pergunta:
-    //     "Tenho conhecimento sobre os projetos de extensão oferecidos pela Faculdade de Computação.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Perguntas sobre Extensão",
-    //   pergunta:
-    //     "As informações sobre os projetos de extensão são facilmente acessíveis e divulgadas para os alunos.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Perguntas sobre Extensão",
-    //   pergunta:
-    //     "Já participei de algum projeto de extensão na Faculdade de Computação.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Perguntas sobre Extensão",
-    //   pergunta:
-    //     "Tenho vontade de participar de um projeto de extensão na Faculdade de Computação.",
-    //   caixa_de_texto: false,
-    //   tipo_pergunta: 3,
-    // },
-    // {
-    //   categoria: "Perguntas Finais",
-    //   pergunta:
-    //     "Aproveite este espaço para dar sugestões de melhorias  ou expressar alguma reclamação sobre a Faculdade de Computação. Não se preocupe, as respostas são anônimas.",
-    //   tipo_pergunta: 4,
-    // },
-    // {
-    //   categoria: "Perguntas Finais",
-    //   pergunta:
-    //     "Existe algum ponto que não foi abordado nas perguntas anteriores que você gostaria de comentar sobre sua experiência na Faculdade de Computação? ",
-    //   tipo_pergunta: 4,
-    // },
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Direção FACOMP",
+      pergunta:
+        "Os membros da Direção são acessíveis e abertos para atender as demandas dos alunos.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Direção FACOMP",
+      pergunta:
+        "As informações fornecidas pela Direção são claras e adequadas para resolver minhas questões acadêmicas.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Direção FACOMP",
+      pergunta:
+        "A Direção da Faculdade demonstrou transparência nas decisões que impactam os alunos.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Direção FACOMP",
+      pergunta:
+        "A Direção é proativa em buscar soluções para os problemas apresentados pelos alunos.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Direção FACOMP",
+      pergunta:
+        "Quando minha demanda não foi atendida imediatamente, a Direção forneceu orientações claras sobre os próximos passos.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Direção FACOMP",
+      pergunta:
+        "A Direção demonstrou disponibilidade e interesse em resolver questões acadêmicas ou administrativas que apresentei.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Direção FACOMP",
+      pergunta:
+        "A Direção tem fornecido feedback adequado sobre minhas demandas ou sugestões apresentadas.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Atendimento - Direção FACOMP",
+      pergunta:
+        "No geral, você está satisfeito com o atendimento e a gestão da Direção da Faculdade de Computação?",
+      caixa_de_texto: false,
+      tipo_pergunta: 2,
+    },
+    {
+      categoria: "Perguntas sobre Pesquisa",
+      pergunta:
+        "Tenho conhecimento sobre os laboratórios de pesquisa disponíveis na Faculdade de Computação.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Perguntas sobre Pesquisa",
+      pergunta:
+        "Sei quais professores estão associados a cada laboratório de pesquisa da faculdade.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Perguntas sobre Pesquisa",
+      pergunta:
+        "As linhas de pesquisa dos professores da Faculdade de Computação são claramente divulgadas para os alunos.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Perguntas sobre Pesquisa",
+      pergunta:
+        "Tenho interesse em participar de um laboratório de pesquisa da Faculdade de Computação.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Perguntas sobre Pesquisa",
+      pergunta:
+        "Os professores da Faculdade de Computação informam regularmente sobre suas pesquisas e como os alunos podem participar.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Perguntas sobre Extensão",
+      pergunta:
+        "Tenho conhecimento sobre os projetos de extensão oferecidos pela Faculdade de Computação.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Perguntas sobre Extensão",
+      pergunta:
+        "As informações sobre os projetos de extensão são facilmente acessíveis e divulgadas para os alunos.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Perguntas sobre Extensão",
+      pergunta:
+        "Já participei de algum projeto de extensão na Faculdade de Computação.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Perguntas sobre Extensão",
+      pergunta:
+        "Tenho vontade de participar de um projeto de extensão na Faculdade de Computação.",
+      caixa_de_texto: false,
+      tipo_pergunta: 3,
+    },
+    {
+      categoria: "Perguntas Finais",
+      pergunta:
+        "Aproveite este espaço para dar sugestões de melhorias  ou expressar alguma reclamação sobre a Faculdade de Computação. Não se preocupe, as respostas são anônimas.",
+      tipo_pergunta: 4,
+    },
+    {
+      categoria: "Perguntas Finais",
+      pergunta:
+        "Existe algum ponto que não foi abordado nas perguntas anteriores que você gostaria de comentar sobre sua experiência na Faculdade de Computação? ",
+      tipo_pergunta: 4,
+    },
   ];
 
   return (
