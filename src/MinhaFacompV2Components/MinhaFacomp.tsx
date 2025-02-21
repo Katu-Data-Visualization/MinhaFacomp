@@ -52,11 +52,7 @@ export default function MinhaFacomp() {
     try {
       setHideLoading(false);
 
-      // Usando server local = http://localhost:4011/api/minhafacomp
-      // Usando uma api externa que chama a api de submit =
-
-      const API_URL =
-        import.meta.env.VITE_API_URL || "http://localhost:4011/api/minhafacomp";
+      const API_URL = "https://katudv.com/api/minhafacomp/submit";
 
       const data = await fetch(`${API_URL}`, {
         method: "POST",
