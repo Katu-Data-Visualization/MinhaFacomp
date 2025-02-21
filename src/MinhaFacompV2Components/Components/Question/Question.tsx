@@ -59,23 +59,6 @@ export default function Question({
               <span>Todos</span>
             </li>
             <li
-              tabIndex={2}
-              onKeyDown={(e) =>
-                e.key === "Enter" &&
-                document.getElementById(`q${questionNumber}-2`)?.click()
-              }
-              style={{ "--delay": ".7s" } as CSSProperties}
-            >
-              <input
-                type="radio"
-                value={"Parcialmente"}
-                name={`q${questionNumber}`}
-                id={`q${questionNumber}-2`}
-                onChange={(e) => handlResposta(e, category, question)}
-              />
-              <span>Parcialmente</span>
-            </li>
-            <li
               tabIndex={3}
               onKeyDown={(e) =>
                 e.key === "Enter" &&
@@ -91,6 +74,23 @@ export default function Question({
                 onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Nenhum</span>
+            </li>
+            <li
+              tabIndex={2}
+              onKeyDown={(e) =>
+                e.key === "Enter" &&
+                document.getElementById(`q${questionNumber}-2`)?.click()
+              }
+              style={{ "--delay": ".7s" } as CSSProperties}
+            >
+              <input
+                type="radio"
+                value={"Parcialmente"}
+                name={`q${questionNumber}`}
+                id={`q${questionNumber}-2`}
+                onChange={(e) => handlResposta(e, category, question)}
+              />
+              <span>Parcialmente</span>
             </li>
           </>
         )}
@@ -256,23 +256,6 @@ export default function Question({
               <span>Satisfeito</span>
             </li>
             <li
-              tabIndex={2}
-              onKeyDown={(e) =>
-                e.key === "Enter" &&
-                document.getElementById(`q${questionNumber}-2`)?.click()
-              }
-              style={{ "--delay": ".7s" } as CSSProperties}
-            >
-              <input
-                type="radio"
-                value={"Insastifeito"}
-                name={`q${questionNumber}`}
-                id={`q${questionNumber}-2`}
-                onChange={(e) => handlResposta(e, category, question)}
-              />
-              <span>Insastifeito</span>
-            </li>
-            <li
               tabIndex={3}
               onKeyDown={(e) =>
                 e.key === "Enter" &&
@@ -288,6 +271,23 @@ export default function Question({
                 onChange={(e) => handlResposta(e, category, question)}
               />
               <span>Neutro</span>
+            </li>
+            <li
+              tabIndex={2}
+              onKeyDown={(e) =>
+                e.key === "Enter" &&
+                document.getElementById(`q${questionNumber}-2`)?.click()
+              }
+              style={{ "--delay": ".7s" } as CSSProperties}
+            >
+              <input
+                type="radio"
+                value={"Insastifeito"}
+                name={`q${questionNumber}`}
+                id={`q${questionNumber}-2`}
+                onChange={(e) => handlResposta(e, category, question)}
+              />
+              <span>Insastifeito</span>
             </li>
           </>
         )}
