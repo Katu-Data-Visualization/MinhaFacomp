@@ -38,8 +38,6 @@ export default function Questionnaire({
       resposta: e.target.value,
     };
 
-    console.log(newRespostas);
-
     setRespostas(newRespostas);
 
     let totalQuestionCheckedAux: any = totalQuestionChecked;
