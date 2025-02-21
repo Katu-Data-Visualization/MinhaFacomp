@@ -55,14 +55,14 @@ export default function MinhaFacomp() {
       // Usando server local = http://localhost:4011/api/minhafacomp
       // Usando uma api externa que chama a api de submit =
 
-      const data = await fetch(
-        "https://minhafacomp-proxy-api.vercel.app/api/minhafacomp",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(respostas),
-        }
-      );
+      const API_URL =
+        import.meta.env.VITE_API_URL || "http://localhost:4011/api/minhafacomp";
+
+      const data = await fetch(`${API_URL}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(respostas),
+      });
 
       if (!data.ok) {
         setShowQuestionnaire(false);
