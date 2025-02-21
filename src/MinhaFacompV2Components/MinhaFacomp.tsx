@@ -50,6 +50,8 @@ export default function MinhaFacomp() {
     }[]
   ) => {
     try {
+      console.log(respostas);
+
       setHideLoading(false);
 
       const API_URL = "https://katudv.com/api/minhafacomp/submit";
@@ -70,9 +72,10 @@ export default function MinhaFacomp() {
       setShowQuestionnaire(false);
       setShowSuccessScreen(true);
     } catch (error) {
+      setHideLoading(true);
       setShowErrorScreen(true);
     } finally {
-      setHideLoading(true);
+      // setHideLoading(true);
     }
   };
 

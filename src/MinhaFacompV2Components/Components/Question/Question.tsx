@@ -32,13 +32,52 @@ export default function Question({
 
       {descricao && (
         <div>
-          {descricao.map((question) => (
-            <p className={styles.descricao}>{question}</p>
+          {descricao.map((question_list) => (
+            <p className={styles.descricao}>{question_list}</p>
           ))}
         </div>
       )}
 
       <ul className={styles.alternativas}>
+        {questionType === 0 && (
+          <>
+            <li
+              tabIndex={1}
+              onKeyDown={(e) =>
+                e.key === "Enter" &&
+                document.getElementById(`q${questionNumber}-1`)?.click()
+              }
+              style={{ "--delay": ".6s" } as CSSProperties}
+            >
+              <input
+                type="radio"
+                value={"Sistemas de Informação"}
+                name={`q${questionNumber}`}
+                id={`q${questionNumber}-1`}
+                onChange={(e) => handlResposta(e, category, question)}
+              />
+              <span>Sistemas de Informação</span>
+            </li>
+            <li
+              tabIndex={2}
+              onKeyDown={(e) =>
+                e.key === "Enter" &&
+                document.getElementById(`q${questionNumber}-2`)?.click()
+              }
+              style={{ "--delay": ".7s" } as CSSProperties}
+            >
+              <input
+                type="radio"
+                value={"Ciência da Computação"}
+                name={`q${questionNumber}`}
+                id={`q${questionNumber}-2`}
+                onChange={(e) => handlResposta(e, category, question)}
+              />
+              <span>Ciência da Computação</span>
+            </li>
+          </>
+        )}
+
         {questionType === 1 && (
           <>
             <li

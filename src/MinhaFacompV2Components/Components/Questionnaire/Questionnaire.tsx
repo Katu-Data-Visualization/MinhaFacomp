@@ -38,6 +38,8 @@ export default function Questionnaire({
       resposta: e.target.value,
     };
 
+    console.log(newRespostas);
+
     setRespostas(newRespostas);
 
     let totalQuestionCheckedAux: any = totalQuestionChecked;
@@ -53,6 +55,12 @@ export default function Questionnaire({
   }
 
   const questionsList = [
+    {
+      categoria: "Perfil",
+      pergunta: "Qual o seu curso:",
+      caixa_de_texto: false,
+      tipo_pergunta: 0,
+    },
     {
       categoria: "Comunicação",
       pergunta:
@@ -168,6 +176,7 @@ export default function Questionnaire({
       categoria: "Atendimento - Direção FACOMP",
       pergunta:
         "A Direção da Faculdade de Computação atendeu minhas solicitações de forma eficiente e rápida.",
+
       caixa_de_texto: false,
       tipo_pergunta: 3,
     },
