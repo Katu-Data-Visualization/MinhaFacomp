@@ -60,6 +60,8 @@ export default function MinhaFacomp() {
         body: JSON.stringify(respostas),
       });
 
+      console.log(data);
+
       if (!data.ok) {
         setShowQuestionnaire(false);
         setShowSuccessScreen(false);
