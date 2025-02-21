@@ -36,6 +36,6 @@ deploy:
       elif [ "$CI_COMMIT_REF_NAME" == "dev" ]; then
         PORT=4001
       fi
-      docker run -d --name "$IMAGE_NAME" -p "$PORT:$PORT" "$IMAGE_NAME"
+      docker run -d --network minhafacomp-network --name "$IMAGE_NAME" -p "$PORT:$PORT" "$IMAGE_NAME"
   rules:
     - if: '$CI_COMMIT_REF_NAME == "main" || $CI_COMMIT_REF_NAME == "dev"'

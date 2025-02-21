@@ -51,22 +51,25 @@ export default function MinhaFacomp() {
   ) => {
     try {
       setHideLoading(false);
-      const data = await fetch("http://localhost:4011/api/minhafacomp", {
+
+      const API_URL = "https://katudv.com/api/minhafacomp/submit";
+
+      const data = await fetch(`${API_URL}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(respostas),
       });
 
       if (!data.ok) {
-        setShowErrorScreen(true);
         setShowQuestionnaire(false);
         setShowSuccessScreen(false);
+        setShowErrorScreen(true);
         return;
       }
 
-      // const responseData = await data.json();
+      const responseData = await data.json();
 
-      // console.log(responseData);
+      console.log(responseData);
 
       setShowQuestionnaire(false);
       setShowSuccessScreen(true);
