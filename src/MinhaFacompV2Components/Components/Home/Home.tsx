@@ -2,7 +2,7 @@ import styles from "./Home.module.css";
 
 //import logoMinhaFacomp from '../../Assets/imgs/logo-minha-facomp.png';
 
-import logoMinhaFACOMPsvg from "../../Assets/imgs/logo-minhafacomp-svg.svg";
+import logoMinhaFACOMPsvg from "../../Assets/imgs/logo-facomp-svg-simple.svg";
 
 import IconButtonLoading from "../../Assets/IconButtonLoading/IconButtonLoading";
 
