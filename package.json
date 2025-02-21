@@ -4,11 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "concurrently \"vite\" \"npm run server\"",
-    "server": "tsx server.ts",
+    "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview & npm run server",
-    "preview:backend": "npm run server & npm run preview"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.0.15",

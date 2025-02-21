@@ -5,6 +5,7 @@ interface QuestionProps {
   showQuestion?: boolean;
   category: string;
   question: string;
+  descricao?: string[];
   questionNumber: number;
   handlResposta: (e: any, category: string, question: string) => void;
   questionType: number;
@@ -13,6 +14,7 @@ interface QuestionProps {
 export default function Question({
   category,
   question,
+  descricao,
   showQuestion,
   questionNumber,
   handlResposta,
@@ -27,6 +29,14 @@ export default function Question({
       <h2>{category}</h2>
       <hr />
       <p>{question}</p>
+
+      {descricao && (
+        <div>
+          {descricao.map((question) => (
+            <p className={styles.descricao}>{question}</p>
+          ))}
+        </div>
+      )}
 
       <ul className={styles.alternativas}>
         {questionType === 1 && (
@@ -221,7 +231,7 @@ export default function Question({
               onChange={(e) => handlResposta(e, category, question)}
               name={`q${questionNumber}`}
               id={`q${questionNumber}-textBox`}
-              placeholder="Digite aqui"
+              placeholder="Digite aqui..."
             ></textarea>
           </>
         )}

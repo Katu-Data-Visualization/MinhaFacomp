@@ -67,10 +67,6 @@ export default function MinhaFacomp() {
         return;
       }
 
-      const responseData = await data.json();
-
-      console.log(responseData);
-
       setShowQuestionnaire(false);
       setShowSuccessScreen(true);
     } catch (error) {
