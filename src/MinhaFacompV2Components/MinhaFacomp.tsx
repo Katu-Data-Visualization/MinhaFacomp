@@ -26,6 +26,7 @@ export default function MinhaFacomp() {
   const [changeBttnColor, setChangeBttnColor] = useState<boolean>(false);
   const [showSuccessScreen, setShowSuccessScreen] = useState<boolean>(false);
   const [hideLoading, setHideLoading] = useState<boolean>(true);
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
 
   function showQuestionary() {
     // setShowIconButtonLoading(true);
@@ -50,7 +51,8 @@ export default function MinhaFacomp() {
     }[]
   ) => {
     try {
-      setHideLoading(true);
+      setHideLoading(false);
+      setIsSubmitting(true);
 
       const API_URL = "https://katudv.com/api/minhafacomp/submit";
 
@@ -63,6 +65,7 @@ export default function MinhaFacomp() {
       if (!data.ok) {
         setShowQuestionnaire(false);
         setShowSuccessScreen(false);
+        setIsSubmitting(false);
         setShowErrorScreen(true);
         return;
       }
@@ -71,11 +74,12 @@ export default function MinhaFacomp() {
       setShowSuccessScreen(true);
     } catch (error) {
       setHideLoading(true);
+      setIsSubmitting(false);
       setShowQuestionnaire(false);
       setShowErrorScreen(true);
-      console.log("caiu no catch");
     } finally {
       setHideLoading(true);
+      setIsSubmitting(false);
     }
   };
 
@@ -107,7 +111,10 @@ export default function MinhaFacomp() {
         changeBttnColor={changeBttnColor}
       />
       {showQuestionnaire && (
-        <Questionnaire finishQuestionnaire={finishQuestionnaire} />
+        <Questionnaire
+          finishQuestionnaire={finishQuestionnaire}
+          isSubmitting={isSubmitting}
+        />
       )}
       <SuccessScreen
         showSuccessScreen={showSuccessScreen}

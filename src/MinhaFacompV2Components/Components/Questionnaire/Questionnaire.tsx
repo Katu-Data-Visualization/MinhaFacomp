@@ -14,10 +14,12 @@ interface QuestionnaireProps {
       resposta: any;
     }[]
   ) => void;
+  isSubmitting: boolean;
 }
 
 export default function Questionnaire({
   finishQuestionnaire,
+  isSubmitting,
 }: QuestionnaireProps) {
   const [currentQuestion, setCurrentQuestion] = useState<number>(0);
 
@@ -376,6 +378,7 @@ export default function Questionnaire({
         {currentQuestion === questionsList.length - 1 &&
           currentQuestion < checkedQuestionsNumber && (
             <button
+              disabled={isSubmitting}
               className={styles.submitButton}
               type="button"
               onClick={() => {
